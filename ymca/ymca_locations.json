@@ -1,0 +1,240 @@
+[
+  {
+    "name": "全国のYMCA",
+    "postal": "064-0811",
+    "address": "北海道札幌市中央区南11条西11丁目2-5",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "盛岡YMCA",
+    "postal": "020-0021",
+    "address": "岩手県盛岡市中央通3丁目19-22",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "仙台YMCA",
+    "postal": "980-0822",
+    "address": "宮城県仙台市青葉区立町9-7",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "ぐんまYMCA",
+    "postal": "371-0033",
+    "address": "群馬県前橋市国領町1-4-1",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "とちぎYMCA",
+    "postal": "320-0041",
+    "address": "栃木県宇都宮市松原2-7-42",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "茨城YMCA",
+    "postal": "305-0033",
+    "address": "茨城県つくば市東新井24-7",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "千葉YMCA",
+    "postal": "260-0015",
+    "address": "千葉県千葉市中央区富士見2-5-15　塚本第三ビル7F",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "埼玉YMCA",
+    "postal": "359-1141",
+    "address": "埼玉県所沢市小手指町1-39-2",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "東京YMCA",
+    "postal": "169-0051",
+    "address": "東京都新宿区西早稲田2-3-18　日本キリスト教会館6階",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "在日本韓国YMCA",
+    "postal": "101-0064",
+    "address": "東京都千代田区神田猿楽町2-5-5",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "横浜YMCA",
+    "postal": "231-8458",
+    "address": "神奈川県横浜市中区常盤町1-7",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "日本YMCA同盟",
+    "postal": "160-0003",
+    "address": "東京都新宿区四谷本塩町2番11号",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "山梨YMCA",
+    "postal": "400-0032",
+    "address": "山梨県甲府市中央3-10-7",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "静岡YMCA",
+    "postal": "413-0018",
+    "address": "静岡県熱海市上宿町19-22　熱海郵便局私書箱31号",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "富山YMCA",
+    "postal": "930-0046",
+    "address": "富山県富山市堤町通り1-3-14",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "金沢YMCA",
+    "postal": "921-8041",
+    "address": "石川県金沢市泉3-10-16-4　朝倉方",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "名古屋YMCA",
+    "postal": "464-0848",
+    "address": "愛知県名古屋市千種区春岡1丁目2-7",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "三重YMCA",
+    "postal": "510-0803",
+    "address": "三重県四日市市阿倉川町3-17",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "滋賀YMCA",
+    "postal": "523-0891",
+    "address": "滋賀県近江八幡市鷹飼町537-3",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "京都YMCA",
+    "postal": "604-8083",
+    "address": "京都府京都市中京区三条通柳馬場東入中之町2",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "奈良YMCA",
+    "postal": "631-0823",
+    "address": "奈良県奈良市西大寺国見町2-14-1",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "大阪YMCA",
+    "postal": "550-0001",
+    "address": "大阪府大阪市西区土佐堀1-5-6",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "和歌山YMCA",
+    "postal": "640-8323",
+    "address": "和歌山県和歌山市太田一丁目12番13号",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "神戸YMCA",
+    "postal": "650-0001",
+    "address": "兵庫県神戸市中央区加納町2-7-11",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "姫路YMCA",
+    "postal": "671-1502",
+    "address": "兵庫県揖保郡太子町原白毛山921",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "YMCAせとうち",
+    "postal": "700-0821",
+    "address": "岡山県岡山市北区中山下1-5-25",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "広島YMCA",
+    "postal": "711-0901",
+    "address": "広島県広島市中区八丁堀7-11",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "松山YMCA",
+    "postal": "790-0823",
+    "address": "愛媛県松山市清水町4丁目75-3-201　砥綿方",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "北九州YMCA",
+    "postal": "802-0004",
+    "address": "福岡県北九州市小倉北区鍛冶町2-3-9",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "福岡YMCA",
+    "postal": "814-0133",
+    "address": "福岡県福岡市城南区七隈1-1-10",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "長崎YMCA",
+    "postal": "850-0056",
+    "address": "長崎県長崎市恵美須町4-7　YMCAビル1階",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "熊本YMCA",
+    "postal": "860-8739",
+    "address": "熊本県熊本市中央区段山本町4-1",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "鹿児島YMCA",
+    "postal": "890-0066",
+    "address": "鹿児島県鹿児島市真砂町34-6吉永ビル209号",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "name": "沖縄YMCA",
+    "postal": "902-0065",
+    "address": "沖縄県那覇市壷屋2-17-3",
+    "lat": null,
+    "lng": null
+  }
+]

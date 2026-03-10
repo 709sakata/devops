@@ -1,0 +1,136 @@
+[00:00:11] 🚀 nightly-audit 開始 (2026-03-05)
+[00:00:11] ✅ Ollama接続確認OK
+[00:00:11] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[00:00:14]   🤖 Issue生成中: src/types/graphql.ts:22
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:00:42]   ⚠️  起票失敗: [Refactor] any型の乱用: types/graphql.ts
+[00:00:42]   🤖 Issue生成中: src/__tests__/unit/notification/notification.service.test.ts:20
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:00:47]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/unit/notification/notification.service.test.ts
+[00:00:47]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:360
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:00:52]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:00:52]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:443
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:00:57]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:00:57]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:04]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:01:04]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:235
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:09]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:01:09]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:120
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:16]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:01:16]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:180
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:22]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:01:22]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:214
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:28]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:01:28]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:32]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/account/nft-instance/presenter.ts
+[00:01:32]   🤖 Issue生成中: src/presentation/middleware/session.ts:80
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:37]   ⚠️  起票失敗: [Refactor] any型の乱用: presentation/middleware/session.ts
+[00:01:37] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[00:01:37] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[00:01:44]   🤖 Issue生成中: src/app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts:26
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:48]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[00:01:48]   🤖 Issue生成中: src/app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts:17
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:54]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[00:01:54]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:9
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:59]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:01:59]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:11
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:04]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:02:04]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:13
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:09]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:02:09]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:9
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:14]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:15]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:26
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:19]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:19]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:28
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:23]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:23]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:62
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:27]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:27]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:79
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:31]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:31]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:100
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:35]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:35]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:119
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:39]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:39]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:171
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:43]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:02:43]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:38
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:47]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:02:47]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:39
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:51]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:02:51]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:40
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:55]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:02:55]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:72
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:02:59]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:00]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:96
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:04]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:04]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:119
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:10]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:10]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:136
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:14]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:14]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:159
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:18]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:18]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:182
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:23]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:23]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:205
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:27]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:27]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:222
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:32]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:32]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:251
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:36]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:03:36]   🤖 Issue生成中: src/app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts:36
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:40]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[00:03:40]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts:35
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:47]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[00:03:47]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts:19
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:52]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[00:03:52]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:15
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:56]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:03:56]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:29
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:04:01]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:04:01] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[00:04:01] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[00:04:02] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[00:04:02] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[00:04:02] ✅ [Hopin-inc/civicship-portal] ESLint検出 完了
+[00:04:02] 🔒 Dependabotセキュリティアラート監査...
+[00:04:02] ✅ Dependabotセキュリティアラート監査 完了
+[00:04:02] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-05.log

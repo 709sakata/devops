@@ -1,0 +1,122 @@
+#!/bin/bash
+# agents/complexity.sh
+# 行数20行以上 or ネスト3段以上の関数を検出し、LLMに分割案を提示させてIssue起票
+#
+# 引数:
+#   $1: repo (例: Hopin-inc/civicship-api)
+#   $2: repo_dir (ローカルパス)
+
+set -euo pipefail
+
+source "${HOME}/scripts/audit/agents/common.sh"
+
+REPO="$1"
+REPO_DIR="$2"
+REPO_NAME="$(basename "$REPO")"
+
+MAX_LINES=20
+MAX_NEST=3
+MAX_ISSUES=10
+
+log "[$REPO_NAME] complexity: 開始"
+
+
+detect() {
+  local src_dir="${REPO_DIR}/src"
+  [[ -d "$src_dir" ]] || { log "[$REPO_NAME] src/ が見つかりません"; return; }
+
+  while IFS= read -r file; do
+    local in_func=0 func_start=0 func_name="" func_lines=0
+    local max_nest=0 brace_depth=0
+
+    while IFS= read -r numbered_line; do
+      lineno="${numbered_line%%:*}"
+      content="${numbered_line#*:}"
+
+      if echo "$content" | grep -qE "^export (async )?function |^export const [A-Za-z_][A-Za-z0-9_]* = (async )?\("; then
+        in_func=1
+        func_start="$lineno"
+        func_lines=0
+        max_nest=0
+        brace_depth=0
+        func_name="$(echo "$content" \
+          | sed -E 's/.*export (async )?function ([A-Za-z_][A-Za-z0-9_]*).*/\2/' \
+          | sed -E 's/.*export const ([A-Za-z_][A-Za-z0-9_]*) =.*/\1/')"
+      fi
+
+      if [[ $in_func -eq 1 ]]; then
+        func_lines=$((func_lines + 1))
+        opens="$(echo "$content" | tr -cd '{' | wc -c)"
+        closes="$(echo "$content" | tr -cd '}' | wc -c)"
+        brace_depth=$((brace_depth + opens - closes))
+        [[ $brace_depth -gt $max_nest ]] && max_nest=$brace_depth
+
+        if [[ $brace_depth -le 0 && $func_lines -gt 1 ]]; then
+          if [[ $func_lines -ge $MAX_LINES || $max_nest -ge $MAX_NEST ]]; then
+            rel="${file#"${REPO_DIR}/"}"
+            echo "${rel}:${func_start}:${func_name}:${func_lines}:${max_nest}"
+          fi
+          in_func=0
+        fi
+      fi
+    done < <(grep -n "" "$file" 2>/dev/null)
+  done < <(find "$src_dir" \( -name "*.ts" -o -name "*.tsx" \) 2>/dev/null | grep -v "__tests__" | grep -v "__generated__" | sort | head -50)
+}
+
+mapfile -t findings < <(detect) || true
+
+if [[ ${#findings[@]} -eq 0 ]]; then
+  log "[$REPO_NAME] complexity: 検出なし、スキップ"
+  exit 0
+fi
+
+table_rows=""
+func_list=""
+count=0
+for entry in "${findings[@]}"; do
+  [[ $count -ge $MAX_ISSUES ]] && break
+  rel_path="$(echo "$entry" | cut -d: -f1)"
+  start="$(echo    "$entry" | cut -d: -f2)"
+  name="$(echo     "$entry" | cut -d: -f3)"
+  lines="$(echo    "$entry" | cut -d: -f4)"
+  nest="$(echo     "$entry" | cut -d: -f5)"
+
+  table_rows+="| \`${rel_path}:${start}\` | \`${name}\` | ${lines} | ${nest} |\n"
+  func_list+="- ${name}（${lines}行、最大ネスト${nest}段）\n"
+  count=$((count + 1))
+done
+
+prompt="以下のTypeScript関数は行数またはネストが深く、リファクタリングが必要です。
+各関数についてどのように分割・改善すべきか、具体的な方針を日本語で簡潔に提案してください。
+
+${func_list}
+
+必ず日本語で回答してください。"
+
+suggestion="$(call_ollama "$prompt")"
+
+total="${#findings[@]}"
+body="## 🔀 複雑関数の検出\n\n"
+body+="行数 **${MAX_LINES}行以上** または ネスト **${MAX_NEST}段以上** の関数です。\n\n"
+body+="| ファイル | 関数名 | 行数 | 最大ネスト |\n"
+body+="|---|---|---|---|\n"
+body+="${table_rows}"
+[[ $total -gt $MAX_ISSUES ]] && body+="\n_他 $((total - MAX_ISSUES)) 件省略_\n"
+body+="\n### 💡 分割・改善提案\n\n${suggestion}\n"
+
+title="[suggest] 複雑関数 (${REPO_NAME})"
+
+existing_titles="$(get_existing_titles "$REPO")"
+if issue_exists "$existing_titles" "$title"; then
+  log "[$REPO_NAME] complexity: 既存Issueあり、スキップ"
+  exit 0
+fi
+
+gh issue create \
+  --repo "$REPO" \
+  --title "$title" \
+  --body "$(echo -e "$body")" \
+  --label "refactor" \
+  --label "Priority: Low"
+
+log "[$REPO_NAME] complexity: Issue起票完了"

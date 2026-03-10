@@ -1,0 +1,34 @@
+[13:33:19] 🚀 nightly-audit 開始 (2026-03-04)
+[13:33:19] 🤖 使用モデル: qwen2.5-coder:14b
+[13:33:19] ✅ Ollama接続確認OK
+[13:33:19] 🔍 [1/4] civicship-api リファクタ監査...
+[13:52:25] 🚀 nightly-audit 開始 (2026-03-04)
+[13:52:25] ❌ Ollamaが起動していません。ollama serve を実行してください。
+[13:52:38] 🚀 nightly-audit 開始 (2026-03-04)
+[13:52:38] ✅ Ollama接続確認OK
+[13:52:38] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[13:52:39]   🤖 Issue生成中: src/types/graphql.ts:22
+
+Creating issue in Hopin-inc/civicship-api
+
+could not add label: 'refactor' not found
+[13:53:07]   ⚠️  起票失敗: [Refactor] any型の乱用: types/graphql.ts
+[13:53:07]   🤖 Issue生成中: src/__tests__/unit/notification/notification.service.test.ts:20
+
+Creating issue in Hopin-inc/civicship-api
+
+could not add label: 'refactor' not found
+[13:53:15]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/unit/notification/notification.service.test.ts
+[13:53:15]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:360
+
+Creating issue in Hopin-inc/civicship-api
+
+could not add label: 'refactor' not found
+[13:53:22]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[13:53:22]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:443
+
+Creating issue in Hopin-inc/civicship-api
+
+could not add label: 'refactor' not found
+[13:53:28]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[13:53:28]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200

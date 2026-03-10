@@ -1,0 +1,1551 @@
+[00:00:11] 🚀 nightly-audit 開始 (2026-03-06)
+[00:00:11] ✅ Ollama接続確認OK
+[00:00:11] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[00:00:13]   🤖 Issue生成中: src/types/graphql.ts:22
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:01:11]   ⚠️  起票失敗: [Refactor] any型の乱用: types/graphql.ts
+[00:01:14]   🤖 Issue生成中: src/__tests__/unit/notification/notification.service.test.ts:20
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/unit/notification/notification.service.test.ts
+[00:02:20]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:360
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:25]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:03:26]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:443
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:03:55]   ⚠️  起票失敗: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:03:58]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:04:49]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:04:51]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:235
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:05:52]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:06:26]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:120
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:07:59]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:08:01]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:180
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:08:55]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:08:59]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:214
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:10:03]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:10:46]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:12:38]   ⚠️  起票失敗: [Refactor] any型の乱用: application/domain/account/nft-instance/presenter.ts
+[00:12:42]   🤖 Issue生成中: src/presentation/middleware/session.ts:93
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:13:28]   ⚠️  起票失敗: [Refactor] any型の乱用: presentation/middleware/session.ts
+[00:13:35] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[00:13:39] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[00:15:09]   🤖 Issue生成中: src/app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts:26
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:16:05]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[00:16:16]   🤖 Issue生成中: src/app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts:17
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:17:01]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[00:17:03]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:9
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:17:29]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:17:30]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:11
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:17:52]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:17:57]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:13
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:18:20]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:18:22]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:9
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:18:45]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:18:46]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:26
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:19:06]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:19:06]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:28
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:19:26]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:19:27]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:62
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:19:42]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:19:42]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:79
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:19:57]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:19:59]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:100
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:20:15]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:20:17]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:119
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:20:35]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:20:37]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:171
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:20:55]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:20:55]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:38
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:21:13]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:21:14]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:39
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:21:28]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:21:28]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:40
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:21:50]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:21:56]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:72
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:22:11]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:22:13]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:96
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:22:28]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:22:29]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:119
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:22:41]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:22:41]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:136
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:22:57]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:22:59]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:159
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:23:33]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:23:34]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:182
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:23:50]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:23:52]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:205
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:24:09]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:24:11]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:222
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:24:39]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:24:41]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:251
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:24:58]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:24:59]   🤖 Issue生成中: src/app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts:36
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:25:15]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[00:25:15]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts:35
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:25:39]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[00:25:39]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts:19
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:25:52]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[00:25:56]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:15
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:26:21]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:26:22]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:29
+/Users/naokisakata/scripts/audit/nightly-audit.sh: line 139: gh: command not found
+[00:26:34]   ⚠️  起票失敗: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:26:34] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[00:26:35] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[00:26:36] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[00:26:36] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[00:26:37] ✅ [Hopin-inc/civicship-portal] ESLint検出 完了
+[00:26:37] 🔒 Dependabotセキュリティアラート監査...
+[00:26:38] ✅ Dependabotセキュリティアラート監査 完了
+[00:26:38] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-06.log
+[00:36:35] 🚀 nightly-audit 開始 (2026-03-06)
+[00:36:35] ✅ Ollama接続確認OK
+[00:36:35] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[00:36:36]   🤖 Issue生成中: src/types/graphql.ts:22
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:39]   ✅ 起票: [Refactor] any型の乱用: types/graphql.ts
+[00:36:39]   🤖 Issue生成中: src/__tests__/unit/notification/notification.service.test.ts:20
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:42]   ✅ 起票: [Refactor] any型の乱用: __tests__/unit/notification/notification.service.test.ts
+[00:36:42]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:360
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:44]   ✅ 起票: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:36:44]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:443
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:46]   ✅ 起票: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:36:46]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:48]   ✅ 起票: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:36:48]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:235
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:51]   ✅ 起票: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/usecase.ts
+[00:36:51]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:120
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:53]   ✅ 起票: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:36:53]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:180
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:55]   ✅ 起票: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:36:55]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:214
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:57]   ✅ 起票: [Refactor] any型の乱用: application/domain/transaction/incentiveGrant/service.ts
+[00:36:57]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:36:59]   ✅ 起票: [Refactor] any型の乱用: application/domain/account/nft-instance/presenter.ts
+[00:36:59]   🤖 Issue生成中: src/presentation/middleware/session.ts:93
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:37:01]   ✅ 起票: [Refactor] any型の乱用: presentation/middleware/session.ts
+[00:37:01] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[00:37:02] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[00:37:04]   🤖 Issue生成中: src/app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts:26
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:06]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[00:37:06]   🤖 Issue生成中: src/app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts:17
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:09]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[00:37:09]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:9
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:11]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:37:11]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:11
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:13]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:37:13]   🤖 Issue生成中: src/app/community/[communityId]/tickets/data/presenter.ts:13
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:16]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/tickets/data/presenter.ts
+[00:37:16]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:9
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:18]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:18]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:26
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:20]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:20]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:28
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:22]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:22]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:62
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:25]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:25]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:79
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:27]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:27]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:100
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:29]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:29]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:119
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:31]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:31]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts:171
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:33]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/usePhoneSubmission.test.ts
+[00:37:33]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:38
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:35]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:35]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:39
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:37]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:37]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:40
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:39]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:39]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:72
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:41]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:41]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:96
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:44]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:44]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:119
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:47]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:47]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:136
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:49]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:49]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:159
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:52]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:52]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:182
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:54]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:54]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:205
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:56]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:56]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:222
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:37:58]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:37:58]   🤖 Issue生成中: src/app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts:251
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:00]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/sign-up/phone-verification/hooks/__tests__/useCodeVerification.test.ts
+[00:38:00]   🤖 Issue生成中: src/app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts:36
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:03]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[00:38:03]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts:35
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:04]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[00:38:04]   🤖 Issue生成中: src/app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts:19
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:06]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[00:38:06]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:15
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:09]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:38:09]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/shared/types/place.ts:29
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:38:11]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:38:11] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[00:38:11] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[00:38:16]   🤖 Issue生成中: src/__tests__/e2e/dataIntegrity.test.ts:162 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:38:18]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in __tests__/e2e/dataIntegrity.test.ts
+[00:38:18]   🤖 Issue生成中: src/__tests__/e2e/dataIntegrity.test.ts:182 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:38:20]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in __tests__/e2e/dataIntegrity.test.ts
+[00:38:20]   🤖 Issue生成中: src/__tests__/e2e/dataIntegrity.test.ts:223 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:38:22]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in __tests__/e2e/dataIntegrity.test.ts
+[00:38:22]   🤖 Issue生成中: src/__tests__/e2e/userJourney.test.ts:147 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:38:25]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in __tests__/e2e/userJourney.test.ts
+[00:38:25]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:286 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:40:09] 🚀 nightly-audit 開始 (2026-03-06)
+[00:40:09] ✅ Ollama接続確認OK
+[00:40:09] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[00:40:10]   🤖 Issue生成中: src/types/graphql.ts:22
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:40:12]   ✅ 起票: [Refactor] any型の乱用: types/graphql.ts
+[00:40:12]   🤖 Issue生成中: src/__tests__/unit/notification/notification.service.test.ts:20
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:40:14]   ✅ 起票: [Refactor] any型の乱用: __tests__/unit/notification/notification.service.test.ts
+[00:40:14]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:360
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:40:16]   ✅ 起票: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:40:16]   🤖 Issue生成中: src/__tests__/integration/pointTransfer/evaluatePassParticipation.test.ts:443
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:40:18]   ✅ 起票: [Refactor] any型の乱用: __tests__/integration/pointTransfer/evaluatePassParticipation.test.ts
+[00:40:18]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200
+[00:51:55] 🚀 nightly-audit 開始 (2026-03-06)
+[00:51:55] ✅ Mac Mini Ollama接続確認OK
+[00:51:55] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[00:51:57]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[00:51:57]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[00:51:57]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[00:51:57]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[00:51:57] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[00:51:57] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[00:51:58]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[00:51:58]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts:10
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:10]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[00:52:10]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/editor/types/form.ts:20
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:15]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[00:52:15]   🤖 Issue生成中: src/app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts:95
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:19]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[00:52:19]   🤖 Issue生成中: src/app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts:8
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:25]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[00:52:25]   🤖 Issue生成中: src/app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts:9
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:29]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[00:52:30]   🤖 Issue生成中: src/app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts:57
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:34]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[00:52:34]   🤖 Issue生成中: src/app/community/[communityId]/search/data/presenter.ts:111
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:40]   ✅ 起票: [Refactor] any型の乱用: app/community/[communityId]/search/data/presenter.ts
+[00:52:40]   🤖 Issue生成中: src/lib/auth/core/firebase-config.ts:81
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:46]   ✅ 起票: [Refactor] any型の乱用: lib/auth/core/firebase-config.ts
+[00:52:46]   🤖 Issue生成中: src/lib/auth/service/liff-service.ts:318
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:51]   ✅ 起票: [Refactor] any型の乱用: lib/auth/service/liff-service.ts
+[00:52:51]   🤖 Issue生成中: src/lib/graphql/server.ts:161
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:52:56]   ✅ 起票: [Refactor] any型の乱用: lib/graphql/server.ts
+[00:52:56]   🤖 Issue生成中: src/lib/logging/client/utils.ts:10
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:53:01]   ✅ 起票: [Refactor] any型の乱用: lib/logging/client/utils.ts
+[00:53:01] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[00:53:01] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[00:53:06]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:11]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-instance/presenter.ts
+[00:53:11]   🤖 Issue生成中: src/application/domain/account/nft-wallet/service.ts:128 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:17]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-wallet/service.ts
+[00:53:17]   🤖 Issue生成中: src/application/domain/account/nft-wallet/usecase.ts:135 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:22]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-wallet/usecase.ts
+[00:53:22]   🤖 Issue生成中: src/application/domain/content/article/usecase.ts:85 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:28]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in application/domain/content/article/usecase.ts
+[00:53:28]   🤖 Issue生成中: src/application/domain/experience/reservation/validator.ts:59 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:33]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in application/domain/experience/reservation/validator.ts
+[00:53:33]   🤖 Issue生成中: src/application/domain/location/master/data/interface.ts:11 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:37]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/location/master/data/interface.ts
+[00:53:37]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:120 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:42]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/transaction/incentiveGrant/service.ts
+[00:53:42]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:47]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/transaction/incentiveGrant/usecase.ts
+[00:53:47]   🤖 Issue生成中: src/external-api.ts:22 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:52]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in external-api.ts
+[00:53:52]   🤖 Issue生成中: src/index.ts:61 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:53:58]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in index.ts
+[00:53:58]   🤖 Issue生成中: src/infrastructure/libs/storage.ts:47 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:03]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in infrastructure/libs/storage.ts
+[00:54:03]   🤖 Issue生成中: src/infrastructure/logging/tracing.ts:63 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:08]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in infrastructure/logging/tracing.ts
+[00:54:08]   🤖 Issue生成中: src/infrastructure/prisma/factories/__generated__/index.ts:1008 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:13]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in infrastructure/prisma/factories/__generated__/index.ts
+[00:54:13]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:20]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[00:54:20]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:25]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[00:54:25]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:29]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[00:54:29]   🤖 Issue生成中: src/presentation/batch/syncNmkr/requestMintNft.ts:48 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:34]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/batch/syncNmkr/requestMintNft.ts
+[00:54:34]   🤖 Issue生成中: src/presentation/middleware/api-key-auth.ts:26 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:38]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/middleware/api-key-auth.ts
+[00:54:38]   🤖 Issue生成中: src/presentation/middleware/auth/firebase-auth.ts:42 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:43]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/middleware/auth/firebase-auth.ts
+[00:54:43]   🤖 Issue生成中: src/presentation/middleware/auth/index.ts:17 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:54:48]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/middleware/auth/index.ts
+[00:54:48] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[00:54:48] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[00:55:56] ✅ [Hopin-inc/civicship-portal] ESLint検出 完了
+[00:55:56] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[00:55:58]   ⏭️  スキップ（既存Issue）: @apollo/server
+[00:55:58]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[00:55:58]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[00:55:58]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[00:55:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[00:55:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[00:55:59]   🤖 Issue生成中: immutable
+
+Creating issue in Hopin-inc/civicship-api
+
+[00:56:06]   ✅ 起票: [Security] immutable - Immutable is vulnerable to Prototype Pollution
+[00:56:06]   ⏭️  スキップ（既存Issue）: minimatch
+[00:56:06]   ⏭️  スキップ（既存Issue）: minimatch
+[00:56:06] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[00:56:06] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[00:56:09]   ⏭️  スキップ（既存Issue）: axios
+[00:56:09]   🤖 Issue生成中: immutable
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:56:15]   ✅ 起票: [Security] immutable - Immutable is vulnerable to Prototype Pollution
+[00:56:15]   🤖 Issue生成中: immutable
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:56:22]   ✅ 起票: [Security] immutable - Immutable is vulnerable to Prototype Pollution
+[00:56:22]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:56:32]   ✅ 起票: [Security] minimatch - minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern
+[00:56:32]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:56:44]   ✅ 起票: [Security] minimatch - minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments
+[00:56:44]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:56:54]   ✅ 起票: [Security] minimatch - minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions
+[00:56:54]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:04]   ✅ 起票: [Security] minimatch - minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern
+[00:57:05]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:16]   ✅ 起票: [Security] minimatch - minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments
+[00:57:16]   🤖 Issue生成中: minimatch
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:25]   ✅ 起票: [Security] minimatch - minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions
+[00:57:25]   🤖 Issue生成中: rollup
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:32]   ✅ 起票: [Security] rollup - Rollup 4 has Arbitrary File Write via Path Traversal
+[00:57:32]   🤖 Issue生成中: storybook
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:39]   ✅ 起票: [Security] storybook - Storybook Dev Server is Vulnerable to WebSocket Hijacking
+[00:57:39]   🤖 Issue生成中: svgo
+
+Creating issue in Hopin-inc/civicship-portal
+
+[00:57:49]   ✅ 起票: [Security] svgo - SVGO DoS through entity expansion in DOCTYPE (Billion Laughs)
+[00:57:49] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[00:57:49] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-06.log
+[01:05:15] 🚀 nightly-audit 開始 (2026-03-06)
+[01:05:15] ✅ Mac Mini Ollama接続確認OK
+[01:05:15] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:05:17]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:05:17]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:05:17]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:05:17]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:05:17] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:05:17] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:05:19]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:05:19] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:05:19] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:05:23]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:30]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-instance/presenter.ts
+[01:05:30]   🤖 Issue生成中: src/application/domain/account/nft-wallet/service.ts:128 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:36]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-wallet/service.ts
+[01:05:36]   🤖 Issue生成中: src/application/domain/account/nft-wallet/usecase.ts:135 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:42]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/account/nft-wallet/usecase.ts
+[01:05:42]   🤖 Issue生成中: src/application/domain/content/article/usecase.ts:85 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:48]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in application/domain/content/article/usecase.ts
+[01:05:48]   🤖 Issue生成中: src/application/domain/experience/reservation/validator.ts:59 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:53]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in application/domain/experience/reservation/validator.ts
+[01:05:53]   🤖 Issue生成中: src/application/domain/location/master/data/interface.ts:11 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:05:57]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/location/master/data/interface.ts
+[01:05:57]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/service.ts:120 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:02]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/transaction/incentiveGrant/service.ts
+[01:06:02]   🤖 Issue生成中: src/application/domain/transaction/incentiveGrant/usecase.ts:200 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:07]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in application/domain/transaction/incentiveGrant/usecase.ts
+[01:06:07]   🤖 Issue生成中: src/external-api.ts:22 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:13]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in external-api.ts
+[01:06:13]   🤖 Issue生成中: src/index.ts:61 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:18]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in index.ts
+[01:06:18]   🤖 Issue生成中: src/infrastructure/libs/storage.ts:47 (@typescript-eslint/no-unused-vars)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:24]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-unused-vars in infrastructure/libs/storage.ts
+[01:06:24]   🤖 Issue生成中: src/infrastructure/logging/tracing.ts:63 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:06:28]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in infrastructure/logging/tracing.ts
+[01:06:28]   🤖 Issue生成中: src/infrastructure/prisma/factories/__generated__/index.ts:1008 (@typescript-eslint/no-explicit-any)
+[01:13:53] 🚀 nightly-audit 開始 (2026-03-06)
+[01:13:53] ✅ Mac Mini Ollama接続確認OK
+[01:13:53] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:13:55]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:13:55]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:13:55]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:13:55]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:13:55] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:13:55] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:13:56]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:13:56] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:13:56] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:14:01]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:20:23] 🚀 nightly-audit 開始 (2026-03-06)
+[01:20:23] ✅ Mac Mini Ollama接続確認OK
+[01:20:23] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:20:27]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:20:27]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:20:27]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:20:27]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:20:27] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:20:27] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:20:30]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:20:30] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:20:30] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:20:42]   🤖 Issue生成中: src/application/domain/account/nft-instance/presenter.ts:6 (@typescript-eslint/no-explicit-any)
+[01:23:41] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:23:46]   📊 ESLintエラー検出: 687件
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[01:23:46]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[01:23:47]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[01:26:37] 🚀 nightly-audit 開始 (2026-03-06)
+[01:26:37] ✅ Mac Mini Ollama接続確認OK
+[01:26:37] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:26:37] 🔒 security エージェント起動
+[01:26:38] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[01:26:41]   ⏭️  スキップ（既存Issue）: @apollo/server
+[01:26:41]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:26:41]   ⏭️  スキップ（既存Issue）: bn.js
+[01:26:41]   🔍 使用箇所を検索中: dompurify
+[01:26:41]   🤖 リスク評価中: dompurify (medium)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:26:51]   ✅ 起票: [Security] dompurify - DOMPurify contains a Cross-site Scripting vulnerability [medium]
+[01:26:52]   🔍 使用箇所を検索中: dompurify
+[01:26:52]   🤖 リスク評価中: dompurify (medium)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:26:59]   ✅ 起票: [Security] dompurify - DOMPurify contains a Cross-site Scripting vulnerability [medium]
+[01:26:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（既存Issue）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（low severity）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（low severity）: fast-xml-parser
+[01:26:59]   ⏭️  スキップ（既存Issue）: immutable
+[01:26:59]   🔍 使用箇所を検索中: lodash-es
+[01:26:59]   🤖 リスク評価中: lodash-es (medium)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:27:07]   ✅ 起票: [Security] lodash-es - Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions [medium]
+[01:27:07]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:07]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:07]   ⏭️  スキップ（low severity）: qs
+[01:27:07] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[01:27:07] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[01:27:10]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:27:10]   🔍 使用箇所を検索中: ajv
+[01:27:12]   🤖 リスク評価中: ajv (medium)
+
+Creating issue in Hopin-inc/civicship-portal
+
+[01:27:20]   ✅ 起票: [Security] ajv - ajv has ReDoS when using `$data` option [medium]
+[01:27:20]   ⏭️  スキップ（既存Issue）: axios
+[01:27:20]   ⏭️  スキップ（既存Issue）: immutable
+[01:27:20]   ⏭️  スキップ（既存Issue）: immutable
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（既存Issue）: minimatch
+[01:27:20]   ⏭️  スキップ（low severity）: qs
+[01:27:20]   ⏭️  スキップ（既存Issue）: rollup
+[01:27:20]   ⏭️  スキップ（既存Issue）: storybook
+[01:27:20]   ⏭️  スキップ（既存Issue）: svgo
+[01:27:20] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[01:27:20] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:27:20] 🔍 type-safety エージェント起動
+[01:27:20] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:27:22]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:27:22]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:27:22]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:27:22]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:27:22] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:27:22] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:27:24]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:27:25]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:27:25] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:27:25] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:27:25] 🔍 eslint エージェント起動
+[01:27:25] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:27:30]   📊 ESLintエラー検出: 687件
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/index.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[01:27:30]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[01:27:30]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:27:38]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[01:27:38]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:27:44]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[01:27:44]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:27:52]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[01:27:52]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[01:27:52]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[01:27:52]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[01:27:52]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[01:27:52]   🤖 Issue生成中: src/presentation/middleware/firebase-phone-auth.ts:51 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:28:03]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/middleware/firebase-phone-auth.ts
+[01:28:03] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[01:28:03] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[01:29:06]   ✅ ESLintエラーなし
+[01:29:06] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-06.log
+[01:46:57] 🚀 nightly-audit 開始 (2026-03-06)
+[01:46:58] ✅ Mac Mini Ollama接続確認OK
+[01:46:58] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:46:58] 🔒 security エージェント起動
+[01:46:58] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[01:53:35] 🚀 nightly-audit 開始 (2026-03-06)
+[01:53:35] ✅ Mac Mini Ollama接続確認OK
+[01:53:35] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:53:35] 🔒 security エージェント起動
+[01:53:36] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[01:53:39]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:53:39]   ⏭️  スキップ（既存Issue）: immutable
+[01:53:39]   ⏭️  スキップ（既存Issue）: dompurify
+[01:53:39]   ⏭️  スキップ（low severity）: fast-xml-parser
+[01:53:39]   ⏭️  スキップ（既存Issue）: minimatch
+[01:53:39]   ⏭️  スキップ（既存Issue）: bn.js
+[01:53:39]   ⏭️  スキップ（low severity）: qs
+[01:53:39]   ⏭️  スキップ（既存Issue）: @apollo/server
+[01:53:39]   ⏭️  スキップ（既存Issue）: lodash-es
+[01:53:39] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[01:53:39] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[01:53:41]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:53:41]   ⏭️  スキップ（既存Issue）: immutable
+[01:53:42]   ⏭️  スキップ（既存Issue）: svgo
+[01:53:42]   ⏭️  スキップ（既存Issue）: minimatch
+[01:53:42]   ⏭️  スキップ（既存Issue）: rollup
+[01:53:42]   ⏭️  スキップ（既存Issue）: storybook
+[01:53:42]   ⏭️  スキップ（既存Issue）: ajv
+[01:53:42]   ⏭️  スキップ（既存Issue）: axios
+[01:53:42]   ⏭️  スキップ（low severity）: qs
+[01:53:42] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[01:53:42] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:53:42] 🔍 type-safety エージェント起動
+[01:53:42] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:53:46]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:53:46]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:53:46]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:53:46]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:53:46] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:53:46] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:53:49]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:53:49]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:53:49]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:53:49]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:53:49]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:53:50]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:53:50] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:53:50] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:53:50] 🔍 eslint エージェント起動
+[01:53:50] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:54:03]   📊 ESLintエラー検出: 687件
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/index.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[01:54:03]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[01:54:03]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:54:18]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[01:54:18]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:54:24]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[01:54:24]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:54:30]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[01:54:30]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[01:54:30]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[01:54:30]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[01:54:30]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[01:54:30]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/firebase-phone-auth.ts
+[01:54:30] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[01:54:30] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[01:56:13] 🚀 nightly-audit 開始 (2026-03-06)
+[01:56:13] ✅ Mac Mini Ollama接続確認OK
+[01:56:13] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:56:13] 🔒 security エージェント起動
+[01:56:13] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[01:56:16]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:56:16]   ⏭️  スキップ（既存Issue）: immutable
+[01:56:16]   ⏭️  スキップ（既存Issue）: dompurify
+[01:56:16]   ⏭️  スキップ（low severity）: fast-xml-parser
+[01:56:16]   ⏭️  スキップ（既存Issue）: minimatch
+[01:56:16]   ⏭️  スキップ（既存Issue）: bn.js
+[01:56:16]   ⏭️  スキップ（low severity）: qs
+[01:56:16]   ⏭️  スキップ（既存Issue）: @apollo/server
+[01:56:16]   ⏭️  スキップ（既存Issue）: lodash-es
+[01:56:16] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[01:56:16] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[01:56:19]   ⏭️  スキップ（low severity）: @tootallnate/once
+[01:56:19]   ⏭️  スキップ（既存Issue）: immutable
+[01:56:19]   ⏭️  スキップ（既存Issue）: svgo
+[01:56:19]   ⏭️  スキップ（既存Issue）: minimatch
+[01:56:19]   ⏭️  スキップ（既存Issue）: rollup
+[01:56:19]   ⏭️  スキップ（既存Issue）: storybook
+[01:56:19]   ⏭️  スキップ（既存Issue）: ajv
+[01:56:19]   ⏭️  スキップ（既存Issue）: axios
+[01:56:19]   ⏭️  スキップ（low severity）: qs
+[01:56:19] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[01:56:19] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:56:19] 🔍 type-safety エージェント起動
+[01:56:19] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[01:56:21]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[01:56:21]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[01:56:21]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[01:56:21]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[01:56:21] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[01:56:21] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[01:56:23]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[01:56:23] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[01:56:23] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[01:56:23] 🔍 eslint エージェント起動
+[01:56:23] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:56:28]   📊 ESLintエラー検出: 687件
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/index.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[01:56:28]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[01:56:28]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[01:56:35]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[01:56:35]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+[01:56:58] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:57:08] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[01:57:12]   📊 ESLintエラー検出: 687件
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/index.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[01:57:13]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[01:57:13]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+[01:57:19]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[01:57:19]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+[01:57:25]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[01:57:25]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+[01:57:33]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[01:57:33]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[01:57:33]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[01:57:33]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[01:57:33]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[01:57:33]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/firebase-phone-auth.ts
+[01:57:33] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[01:57:33] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[01:58:27]   ✅ ESLintエラーなし
+[02:17:46] 🚀 nightly-audit 開始 (2026-03-06)
+[02:17:46] ✅ Mac Mini Ollama接続確認OK
+[02:17:46] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:17:46] 🔒 security エージェント起動
+[02:17:46] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[02:17:49]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:17:49]   ⏭️  スキップ（既存Issue）: immutable
+[02:17:49]   ⏭️  スキップ（既存Issue）: dompurify
+[02:17:49]   ⏭️  スキップ（low severity）: fast-xml-parser
+[02:17:49]   ⏭️  スキップ（既存Issue）: minimatch
+[02:17:49]   ⏭️  スキップ（既存Issue）: bn.js
+[02:17:49]   ⏭️  スキップ（low severity）: qs
+[02:17:49]   ⏭️  スキップ（既存Issue）: @apollo/server
+[02:17:49]   ⏭️  スキップ（既存Issue）: lodash-es
+[02:17:49] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[02:17:49] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[02:17:52]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:17:52]   ⏭️  スキップ（既存Issue）: immutable
+[02:17:52]   ⏭️  スキップ（既存Issue）: svgo
+[02:17:52]   ⏭️  スキップ（既存Issue）: minimatch
+[02:17:52]   ⏭️  スキップ（既存Issue）: rollup
+[02:17:52]   ⏭️  スキップ（既存Issue）: storybook
+[02:17:52]   ⏭️  スキップ（既存Issue）: ajv
+[02:17:52]   ⏭️  スキップ（既存Issue）: axios
+[02:17:52]   ⏭️  スキップ（low severity）: qs
+[02:17:52] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[02:17:52] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:17:52] 🔍 type-safety エージェント起動
+[02:17:52] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[02:17:56]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[02:17:56]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[02:17:56]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[02:17:56]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[02:17:56] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[02:17:56] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[02:18:00]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[02:18:00] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[02:18:00] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:18:00] 🔍 eslint エージェント起動
+[02:18:00] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[02:18:14]   📊 ESLintエラー検出: 687件
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/index.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[02:18:14]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[02:18:14]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:18:23]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[02:18:23]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:18:28]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[02:18:28]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:18:36]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[02:18:36]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[02:18:36]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[02:18:36]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[02:18:36]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[02:18:36]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/firebase-phone-auth.ts
+[02:18:36] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[02:18:36] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[02:19:40]   ✅ ESLintエラーなし
+[02:19:40] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-06.log
+[02:21:02] 🚀 nightly-audit 開始 (2026-03-06)
+[02:21:02] ✅ Mac Mini Ollama接続確認OK
+[02:21:02] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:21:02] 🔒 security エージェント起動
+[02:21:02] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[02:21:04]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:21:04]   ⏭️  スキップ（既存Issue）: immutable
+[02:21:04]   ⏭️  スキップ（既存Issue）: dompurify
+[02:21:04]   ⏭️  スキップ（low severity）: fast-xml-parser
+[02:21:04]   ⏭️  スキップ（既存Issue）: minimatch
+[02:21:04]   ⏭️  スキップ（既存Issue）: bn.js
+[02:21:04]   ⏭️  スキップ（low severity）: qs
+[02:21:04]   ⏭️  スキップ（既存Issue）: @apollo/server
+[02:21:05]   ⏭️  スキップ（既存Issue）: lodash-es
+[02:21:05] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[02:21:05] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[02:21:07]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:21:07]   ⏭️  スキップ（既存Issue）: immutable
+[02:21:07]   ⏭️  スキップ（既存Issue）: svgo
+[02:21:07]   ⏭️  スキップ（既存Issue）: minimatch
+[02:21:07]   ⏭️  スキップ（既存Issue）: rollup
+[02:21:07]   ⏭️  スキップ（既存Issue）: storybook
+[02:21:07]   ⏭️  スキップ（既存Issue）: ajv
+[02:21:07]   ⏭️  スキップ（既存Issue）: axios
+[02:21:08]   ⏭️  スキップ（low severity）: qs
+[02:21:08] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[02:21:08] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:21:08] 🔍 type-safety エージェント起動
+[02:21:08] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[02:21:09]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[02:21:09]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[02:21:09]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[02:21:09]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[02:21:09] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[02:21:09] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[02:21:12]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[02:21:12] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[02:21:12] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:21:12] 🔍 eslint エージェント起動
+[02:21:12] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[02:21:17]   📊 ESLintエラー検出: 687件
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/index.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[02:21:17]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[02:21:17]   🤖 Issue生成中: - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:21:23]   ✅ 起票: [Refactor] ESLint:  in - If that's what you want, disable this lint rule with an inline comment or configure the 'allowObjectTypes' rule option.
+[02:21:23]   🤖 Issue生成中: - If you want a type meaning "any object", you probably want `object` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:21:29]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any object", you probably want `object` instead.
+[02:21:29]   🤖 Issue生成中: - If you want a type meaning "any value", you probably want `unknown` instead.: ()
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:21:37]   ✅ 起票: [Refactor] ESLint:  in - If you want a type meaning "any value", you probably want `unknown` instead.
+[02:21:37]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[02:21:38]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[02:21:38]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[02:21:38]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[02:21:38]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/firebase-phone-auth.ts
+[02:21:38] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[02:21:38] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[02:26:55] 🚀 nightly-audit 開始 (2026-03-06)
+[02:26:55] ✅ Mac Mini Ollama接続確認OK
+[02:26:55] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:26:55] 🔒 security エージェント起動
+[02:26:55] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[02:26:58]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:26:58]   ⏭️  スキップ（既存Issue）: immutable
+[02:26:58]   ⏭️  スキップ（既存Issue）: dompurify
+[02:26:58]   ⏭️  スキップ（low severity）: fast-xml-parser
+[02:26:58]   ⏭️  スキップ（既存Issue）: minimatch
+[02:26:58]   ⏭️  スキップ（既存Issue）: bn.js
+[02:26:58]   ⏭️  スキップ（low severity）: qs
+[02:26:58]   ⏭️  スキップ（既存Issue）: @apollo/server
+[02:26:58]   ⏭️  スキップ（既存Issue）: lodash-es
+[02:26:58] ✅ [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査 完了
+[02:26:58] 🔒 [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査...
+[02:27:01]   ⏭️  スキップ（low severity）: @tootallnate/once
+[02:27:01]   ⏭️  スキップ（既存Issue）: immutable
+[02:27:01]   ⏭️  スキップ（既存Issue）: svgo
+[02:27:01]   ⏭️  スキップ（既存Issue）: minimatch
+[02:27:01]   ⏭️  スキップ（既存Issue）: rollup
+[02:27:01]   ⏭️  スキップ（既存Issue）: storybook
+[02:27:01]   ⏭️  スキップ（既存Issue）: ajv
+[02:27:01]   ⏭️  スキップ（既存Issue）: axios
+[02:27:01]   ⏭️  スキップ（low severity）: qs
+[02:27:01] ✅ [Hopin-inc/civicship-portal] Dependabotセキュリティアラート監査 完了
+[02:27:01] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:27:01] 🔍 type-safety エージェント起動
+[02:27:01] 🔍 [Hopin-inc/civicship-api] any型検出中...
+[02:27:03]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/usecase.ts
+[02:27:03]   ⏭️  スキップ（既存Issue）: application/domain/transaction/incentiveGrant/service.ts
+[02:27:03]   ⏭️  スキップ（既存Issue）: application/domain/account/nft-instance/presenter.ts
+[02:27:03]   ⏭️  スキップ（既存Issue）: presentation/middleware/session.ts
+[02:27:03] ✅ [Hopin-inc/civicship-api] any型検出 完了
+[02:27:03] 🔍 [Hopin-inc/civicship-portal] any型検出中...
+[02:27:05]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/receive/hooks/useTicketClaim.ts
+[02:27:05]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/hooks/useTicketClaimLinks.ts
+[02:27:05]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/tickets/data/presenter.ts
+[02:27:05]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/opportunities/features/list/hooks/useOpportunities.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/detail/hooks/attendance/useSaveAttendances.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/reservations/features/list/hooks/useReservations.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/shared/types/place.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/list/services/placeTransformer.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/types/form.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/places/features/editor/services/postalCodeService.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/wallet/hooks/useCommunityTransactions.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/admin/credentials/hooks/useEvaluationBulkCreate.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/reservation/confirm/presenters/presentReservationConfirm.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: app/community/[communityId]/search/data/presenter.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: lib/auth/core/firebase-config.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: lib/auth/service/liff-service.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: lib/graphql/server.ts
+[02:27:06]   ⏭️  スキップ（既存Issue）: lib/logging/client/utils.ts
+[02:27:06] ✅ [Hopin-inc/civicship-portal] any型検出 完了
+[02:27:06] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[02:27:06] 🔍 eslint エージェント起動
+[02:27:06] 🔍 [Hopin-inc/civicship-api] ESLint検出中...
+[02:27:11]   📊 ESLintエラー検出: 687件
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-instance/presenter.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/service.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/account/nft-wallet/usecase.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/content/article/usecase.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/experience/reservation/validator.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/location/master/data/interface.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/service.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/application/domain/transaction/incentiveGrant/usecase.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/external-api.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/index.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/infrastructure/libs/storage.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/infrastructure/logging/tracing.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/batch/syncNmkr/requestMintNft.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/api-key-auth.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/firebase-auth.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/auth/index.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/firebase-phone-auth.ts
+[02:27:11]   ⏭️  スキップ（既存Issue）: src/presentation/middleware/session.ts
+[02:27:11]   🤖 Issue生成中: src/presentation/router/line.ts:50 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:27:22]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/router/line.ts
+[02:27:22]   🤖 Issue生成中: src/presentation/router/wallet.ts:21 (@typescript-eslint/no-explicit-any)
+
+Creating issue in Hopin-inc/civicship-api
+
+[02:27:32]   ✅ 起票: [Refactor] ESLint: @typescript-eslint/no-explicit-any in presentation/router/wallet.ts
+[02:27:32] ✅ [Hopin-inc/civicship-api] ESLint検出 完了
+[02:27:32] 🔍 [Hopin-inc/civicship-portal] ESLint検出中...
+[02:28:16]   ✅ ESLintエラーなし
+[02:28:16] 🎉 全監査完了 | ログ: /Users/naokisakata/scripts/audit/logs/2026-03-06.log
+[03:05:55] 🚀 nightly-audit 開始 (2026-03-06)
+[03:05:55] ✅ Mac Mini Ollama接続確認OK
+[03:05:55] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[03:05:55] 🔒 security エージェント起動
+[03:05:55] 🔒 [Hopin-inc/civicship-api] Dependabotセキュリティアラート監査...
+[03:53:48] [civicship-api] uncommented: 開始
+[04:02:39] === code-quality suggest 開始 2026-03-06 04:02:39 ===
+[04:02:39] [civicship-api] ---- 開始 ----
+[04:02:39] [civicship-api] uncommented: 開始
+[04:03:36] [civicship-api] uncommented: Issue起票完了
+[04:03:36] [civicship-api] naming: 開始
+[04:03:55] [civicship-api] naming: Issue起票完了
+[04:03:55] [civicship-api] complexity: 開始
+[04:05:46] [civicship-api] complexity: Issue起票完了
+[04:05:46] [civicship-api] ---- 完了 ----
+[04:05:46] [civicship-portal] ---- 開始 ----
+[04:05:46] [civicship-portal] uncommented: 開始
+[04:07:05] [civicship-portal] uncommented: Issue起票完了
+[04:07:05] [civicship-portal] naming: 開始
+[04:07:43] [civicship-portal] naming: Issue起票完了
+[04:07:43] [civicship-portal] complexity: 開始
+[04:09:07] [civicship-portal] complexity: Issue起票完了
+[04:09:07] [civicship-portal] ---- 完了 ----
+[04:09:07] === code-quality suggest 完了 ===
+[04:15:58] === code-quality suggest 開始 2026-03-06 04:15:58 ===
+[04:15:58] [civicship-api] ---- 開始 ----
+[04:15:58] [civicship-api] uncommented: 開始
+[04:16:53] [civicship-api] uncommented: 既存Issueあり、スキップ
+[04:16:53] [civicship-api] naming: 開始
+[04:17:29] [civicship-api] naming: 既存Issueあり、スキップ
+[04:17:29] [civicship-api] complexity: 開始
+[04:18:36] [civicship-api] complexity: 既存Issueあり、スキップ
+[04:18:36] [civicship-api] ---- 完了 ----
+[04:18:36] [civicship-portal] ---- 開始 ----
+[04:18:36] [civicship-portal] uncommented: 開始
+[04:19:47] [civicship-portal] uncommented: 既存Issueあり、スキップ
+[04:19:47] [civicship-portal] naming: 開始
+[04:20:22] [civicship-portal] naming: 改善候補なし、スキップ
+[04:20:22] [civicship-portal] complexity: 開始
+[04:21:42] [civicship-portal] complexity: 既存Issueあり、スキップ
+[04:21:42] [civicship-portal] ---- 完了 ----
+[04:21:42] === code-quality suggest 完了 ===
+[04:31:09] === code-quality suggest 開始 2026-03-06 04:31:09 ===
+[04:31:09] [civicship-api] ---- 開始 ----
+[04:31:09] [civicship-api] uncommented: 開始
+[04:32:05] [civicship-api] uncommented: Issue起票完了
+[04:32:05] [civicship-api] naming: 開始
+[04:32:42] [civicship-api] naming: Issue起票完了
+[04:32:42] [civicship-api] complexity: 開始
+[04:33:52] [civicship-api] complexity: Issue起票完了
+[04:33:52] [civicship-api] ---- 完了 ----
+[04:33:52] [civicship-portal] ---- 開始 ----
+[04:33:52] [civicship-portal] uncommented: 開始
+[04:35:11] [civicship-portal] uncommented: Issue起票完了
+[04:35:11] [civicship-portal] naming: 開始
+[04:35:46] [civicship-portal] naming: 改善候補なし、スキップ
+[04:35:46] [civicship-portal] complexity: 開始
+[04:37:11] [civicship-portal] complexity: Issue起票完了
+[04:37:11] [civicship-portal] ---- 完了 ----
+[04:37:11] === code-quality suggest 完了 ===
+[04:56:57] === code-quality suggest 開始 2026-03-06 04:56:57 ===
+[04:56:57] [civicship-api] ---- 開始 ----
+[04:56:57] [civicship-api] uncommented: 開始
+[04:57:47] [civicship-api] uncommented: 既存Issueあり、スキップ
+[04:57:47] [civicship-api] naming: 開始
+[04:58:22] [civicship-api] naming: 既存Issueあり、スキップ
+[04:58:22] [civicship-api] complexity: 開始
+[04:59:17] [civicship-api] complexity: 既存Issueあり、スキップ
+[04:59:17] [civicship-api] ---- 完了 ----
+[04:59:17] [civicship-portal] ---- 開始 ----
+[04:59:17] [civicship-portal] uncommented: 開始
+[05:15:36] === code-quality suggest 開始 2026-03-06 05:15:36 ===
+[05:15:36] [civicship-api] ---- 開始 ----
+[05:15:37] [civicship-api] uncommented: 開始
+[05:16:34] [civicship-api] uncommented: Issue起票完了
+[05:16:34] [civicship-api] naming: 開始
+[05:17:07] [civicship-api] naming: 改善候補なし、スキップ
+[05:17:08] [civicship-api] complexity: 開始
+[05:18:26] [civicship-api] complexity: Issue起票完了
+[05:18:26] [civicship-api] ---- 完了 ----
+[05:18:26] [civicship-portal] ---- 開始 ----
+[05:18:26] [civicship-portal] uncommented: 開始
+[05:19:39] [civicship-portal] uncommented: 既存Issueあり、スキップ
+[05:19:39] [civicship-portal] naming: 開始
+[05:20:14] [civicship-portal] naming: 改善候補なし、スキップ
+[05:20:14] [civicship-portal] complexity: 開始
+[05:21:29] [civicship-portal] complexity: 既存Issueあり、スキップ
+[05:21:29] [civicship-portal] ---- 完了 ----
+[05:21:29] === code-quality suggest 完了 ===
+[12:30:25] === code-quality suggest 開始 2026-03-06 12:30:25 ===
+[12:30:25] [civicship-api] ---- 開始 ----
+[12:30:25] [civicship-api] uncommented: 開始
+[12:50:36] === code-quality suggest 開始 2026-03-06 12:50:36 ===
+[12:50:36] [civicship-api] ---- 開始 ----
+[12:50:36] [civicship-api] uncommented: 開始
+[12:51:54] [civicship-api] uncommented: 既存Issueあり、スキップ
+[12:51:55] [civicship-api] naming: 開始
+[12:52:34] [civicship-api] naming: Issue起票完了
+[12:52:34] [civicship-api] complexity: 開始
+[12:53:48] [civicship-api] complexity: 既存Issueあり、スキップ
+[12:53:48] [civicship-api] ---- 完了 ----
+[12:53:48] [civicship-portal] ---- 開始 ----
+[12:53:48] [civicship-portal] uncommented: 開始
+[12:55:03] [civicship-portal] uncommented: 既存Issueあり、スキップ
+[12:55:04] [civicship-portal] naming: 開始
+[12:55:39] [civicship-portal] naming: 改善候補なし、スキップ
+[12:55:39] [civicship-portal] complexity: 開始
+[12:57:01] [civicship-portal] complexity: 既存Issueあり、スキップ
+[12:57:02] [civicship-portal] ---- 完了 ----
+[12:57:02] === code-quality suggest 完了 ===
+[15:03:48] === code-quality suggest 開始 2026-03-06 15:03:48 ===
+[15:03:48] [civicship-api] ---- 開始 ----
+[15:03:49] [civicship-api] uncommented: 開始
+[15:05:06] [civicship-api] uncommented: Issue起票完了
+[15:05:06] [civicship-api] naming: 開始
+[15:05:41] [civicship-api] naming: 改善候補なし、スキップ
+[15:05:41] [civicship-api] complexity: 開始
+[15:07:03] [civicship-api] complexity: Issue起票完了
+[15:07:03] [civicship-api] ---- 完了 ----
+[15:07:03] [civicship-portal] ---- 開始 ----
+[15:07:03] [civicship-portal] uncommented: 開始
+[15:08:28] [civicship-portal] uncommented: Issue起票完了
+[15:08:29] [civicship-portal] naming: 開始
+[15:09:08] [civicship-portal] naming: 改善候補なし、スキップ
+[15:09:09] [civicship-portal] complexity: 開始
+[15:11:10] [civicship-portal] complexity: Issue起票完了
+[15:11:10] [civicship-portal] ---- 完了 ----
+[15:11:10] === code-quality suggest 完了 ===
+[15:38:11] [civicship-api] pr-creator: 開始
+[15:38:13] [civicship-api] pr-creator[jsdoc]: 1件のIssueを処理
+[15:38:13] [civicship-api] pr-creator[jsdoc]: Claude APIに修正依頼中...
