@@ -12,7 +12,7 @@ REPO="$1"
 REPO_DIR="$2"
 REPO_NAME="$(basename "$REPO")"
 ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-}"
-CLAUDE_MODEL="claude-sonnet-4-20250514"
+CLAUDE_MODEL="claude-sonnet-4-6"
 DATE=$(date +"%Y%m%d")
 
 log "[$REPO_NAME] pr-creator: 開始"

@@ -52,4 +52,4 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 | 用途 | モデル |
 |------|--------|
 | audit / suggest（検出・分析） | Ollama: `qwen2.5-coder:7b` |
-| pr-creator（コード修正・PR作成） | Claude API: `claude-sonnet-4-20250514` |
+| pr-creator（コード修正・PR作成） | Claude API: `claude-sonnet-4-6` |

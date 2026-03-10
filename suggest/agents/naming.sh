@@ -46,14 +46,22 @@ if [[ -z "$func_list" ]]; then
   exit 0
 fi
 
-prompt="以下はTypeScriptプロジェクトのファイルごとの関数名一覧です。
+# プロジェクト種別をリポジトリ名から推定
+project_context=""
+case "$REPO_NAME" in
+  *api*)   project_context="バックエンドAPI（NestJS想定）" ;;
+  *portal* | *web* | *front*) project_context="フロントエンド（Next.js想定）" ;;
+  *)       project_context="TypeScriptプロジェクト" ;;
+esac
+
+prompt="以下は${project_context}のファイルごとの関数名一覧です。
 意図が不明瞭・曖昧・改善の余地がある関数名を最大10件ピックアップし、
 改善案と理由を日本語で簡潔に示してください。
 問題のない関数名は無視し、改善候補がなければ「改善候補なし」とだけ返してください。
 
 ${func_list}
 
-必ず日本語で回答してください。"
+必ず日本語で回答してください。前置き・後書き不要。改善候補がある場合は「元の名前 → 改善案: 理由」の形式で答えてください。"
 
 result="$(call_ollama "$prompt")"
 
