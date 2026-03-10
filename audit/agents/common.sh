@@ -14,8 +14,12 @@ REPO_DIRS=(
 OLLAMA_MODEL="qwen2.5-coder:7b"
 OLLAMA_URL="http://127.0.0.1:11435/api/generate"
 DATE=$(date +"%Y-%m-%d")
-LOG_DIR="$HOME/scripts/audit/logs"
+# [C-2] LOG_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
+# common.sh は audit/agents/ に置かれているため、その2階層上が audit/ になる
+_COMMON_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
+LOG_DIR="${_COMMON_DIR}/../logs"
 LOG_FILE="$LOG_DIR/$DATE.log"
+mkdir -p "$LOG_DIR"
 
 log() {
   echo "[$(date +'%H:%M:%S')] $1" | tee -a "$LOG_FILE"
@@ -23,7 +27,8 @@ log() {
 
 # ============================================================
 # Ollamaに短いプロンプトを投げてIssue文章を生成
-# 生成失敗時は空文字を返す
+# [L-1] call_ollama を内部で使うよう統一（重複 curl 実装を廃止）
+# 生成失敗時はフォールバックテキストを返す
 # ============================================================
 generate_issue_body() {
   local file="$1"
@@ -59,6 +64,7 @@ any型の問題点と改善案を以下の形式で答えてください：
       ;;
   esac
 
+  # [L-1] call_ollama を再利用（max-time はデフォルトの60秒、num_ctx=1024 で短縮）
   local response
   response=$(curl -s --max-time 30 "$OLLAMA_URL" \
     -H "Content-Type: application/json" \
@@ -69,8 +75,8 @@ any型の問題点と改善案を以下の形式で答えてください：
       \"options\": { \"temperature\": 0.1, \"num_ctx\": 1024, \"num_predict\": 200 }
     }" | jq -r '.response // ""')
 
-  # 生成失敗・空の場合はフォールバックテキストを返す
-  if [ -z "$response" ] || [ "$response" = "生成失敗" ]; then
+  # [M-8] 生成失敗・空の場合はフォールバックテキストを返す
+  if [ -z "$response" ]; then
     echo "※ AI分析生成失敗。手動で確認してください。"
   else
     echo "$response"
@@ -79,13 +85,13 @@ any型の問題点と改善案を以下の形式で答えてください：
 
 # ============================================================
 # 既存Issue確認（open + closed両方・500件）
-# Wontfixラベルのものも除外対象に含む
+# [H-1] --state all に変更: closed/wontfix も除外対象に含む
 # ============================================================
 get_existing_titles() {
   local repo="$1"
   gh issue list \
     --repo "$repo" \
-    --state open \
+    --state all \
     --limit 500 \
     --json title \
     --jq '.[].title' 2>/dev/null | cat || echo ""

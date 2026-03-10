@@ -82,10 +82,11 @@ for entry in "${findings[@]}"; do
   nest="$(echo     "$entry" | cut -d: -f5)"
 
   # 関数の実コードを抽出（最大40行）
+  # [H-3] off-by-one 修正: 終端行は start + lines - 1（start が func_lines に含まれるため）
   full_path="${REPO_DIR}/${rel_path}"
   func_code=""
   if [[ -f "$full_path" ]]; then
-    func_code="$(sed -n "${start},$((start + lines))p" "$full_path" | head -40)"
+    func_code="$(sed -n "${start},$((start + lines - 1))p" "$full_path" | head -40)"
   fi
 
   table_rows+="| \`${rel_path}:${start}\` | \`${name}\` | ${lines} | ${nest} |\n"
@@ -120,10 +121,11 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
+# [L-2] echo -e の代わりに printf で確実に改行展開
 gh issue create \
   --repo "$REPO" \
   --title "$title" \
-  --body "$(echo -e "$body")" \
+  --body "$(printf '%b' "$body")" \
   --label "refactor" \
   --label "Priority: Low"
 
