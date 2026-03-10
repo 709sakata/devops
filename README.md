@@ -2,10 +2,22 @@
 
 civicship-api / civicship-portal のコード品質を自動監視・改善提案するスクリプト群。
 
-## 構成
+## アーキテクチャ
+```
+Mac Mini（常時稼働）
+  ├── cron で自動実行
+  ├── Ollama（qwen2.5-coder:7b）をローカル実行
+  └── ghq で GitHub からスクリプトを管理
+
+MacBook Air
+  └── スクリプトを編集して push するだけ
+      → Mac Mini が毎日 2時に git pull で自動反映
+```
+
+## ディレクトリ構成
 ```
 scripts/
-├── audit/                    # 監視・アラート（nightly-audit）
+├── audit/                    # 監視・アラート
 │   ├── nightly-audit.sh      # オーケストレーター（毎日0時）
 │   └── agents/
 │       ├── common.sh         # 共通関数
@@ -16,38 +28,27 @@ scripts/
 └── suggest/                  # 改善提案・PR自動作成
     ├── code-quality.sh       # オーケストレーター（毎週月曜3時）
     └── agents/
-        ├── common.sh         → audit/agents/common.sh を流用
         ├── uncommented.sh    # JSDocなし関数を検出・自動生成
         ├── naming.sh         # 命名レビュー
         ├── complexity.sh     # 複雑関数検出
         └── pr-creator.sh     # Issueをまとめて修正PRを自動作成
 ```
 
-## 実行環境
-
-- MacBook Air → SSHトンネル → Mac Mini（Ollama）
-- Ollama モデル: `qwen2.5-coder:7b`（audit / suggest用）
-- Claude API: `claude-sonnet-4-20250514`（pr-creator用）
-
-## crontab
+## cron（Mac Mini）
 ```
-# nightly-audit（毎日0時）
-0 0 * * * ~/scripts/audit/nightly-audit.sh >> ~/scripts/audit/logs/$(date +\%Y-\%m-\%d).log 2>&1
-
-# code-quality suggest（毎週月曜3時）
-0 3 * * 1 ~/scripts/suggest/code-quality.sh >> ~/scripts/suggest/logs/code-quality.log 2>&1
+0 2 * * *   git pull origin main（スクリプト自動更新）
+0 0 * * *   nightly-audit.sh（毎日0時）
+0 3 * * 1   code-quality.sh（毎週月曜3時）
 ```
 
-## 環境変数
+## 環境変数（Mac Mini の ~/.zshrc）
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
 ```
 
-## GitHub Issues ラベル体系
+## 使用モデル
 
-| ラベル | 意味 |
-|--------|------|
-| `refactor` | リファクタリング対象 |
-| `security` | セキュリティ関連 |
-| `Priority: Low` | 優先度低 |
-| `Problem: Security` | セキュリティ問題 |
+| 用途 | モデル |
+|------|--------|
+| audit / suggest（検出・分析） | Ollama: `qwen2.5-coder:7b` |
+| pr-creator（コード修正・PR作成） | Claude API: `claude-sonnet-4-20250514` |
