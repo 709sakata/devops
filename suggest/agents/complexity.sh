@@ -71,7 +71,7 @@ if [[ ${#findings[@]} -eq 0 ]]; then
 fi
 
 table_rows=""
-func_list=""
+func_details=""
 count=0
 for entry in "${findings[@]}"; do
   [[ $count -ge $MAX_ISSUES ]] && break
@@ -81,17 +81,25 @@ for entry in "${findings[@]}"; do
   lines="$(echo    "$entry" | cut -d: -f4)"
   nest="$(echo     "$entry" | cut -d: -f5)"
 
+  # 関数の実コードを抽出（最大40行）
+  full_path="${REPO_DIR}/${rel_path}"
+  func_code=""
+  if [[ -f "$full_path" ]]; then
+    func_code="$(sed -n "${start},$((start + lines))p" "$full_path" | head -40)"
+  fi
+
   table_rows+="| \`${rel_path}:${start}\` | \`${name}\` | ${lines} | ${nest} |\n"
-  func_list+="- ${name}（${lines}行、最大ネスト${nest}段）\n"
+  func_details+="### ${name}（${rel_path}:${start}、${lines}行、最大ネスト${nest}段）\n\`\`\`typescript\n${func_code}\n\`\`\`\n\n"
   count=$((count + 1))
 done
 
 prompt="以下のTypeScript関数は行数またはネストが深く、リファクタリングが必要です。
-各関数についてどのように分割・改善すべきか、具体的な方針を日本語で簡潔に提案してください。
+各関数のコードを見て、どのように分割・改善すべきか具体的な方針を日本語で簡潔に提案してください。
+関数名だけでなく実装内容に基づいた提案をしてください。
 
-${func_list}
+${func_details}
 
-必ず日本語で回答してください。"
+必ず日本語で回答してください。前置き・後書き不要。各関数について「関数名: 提案内容」の形式で答えてください。"
 
 suggestion="$(call_ollama "$prompt")"
 
