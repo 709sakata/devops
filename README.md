@@ -1,6 +1,7 @@
 # devops
 
-civicship-api / civicship-portal のコード品質を自動監視・改善提案するスクリプト群。
+GitHubリポジトリのコード品質を自動監視・改善提案するスクリプト群。
+対象リポジトリは `audit/agents/common.sh` の `REPOS` / `REPO_DIRS` で設定（デフォルト: civicship-api / civicship-portal）。
 
 ## アーキテクチャ
 ```

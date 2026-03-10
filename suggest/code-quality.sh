@@ -8,16 +8,6 @@ set -euo pipefail
 AGENTS_DIR="${HOME}/scripts/suggest/agents"
 source "${HOME}/scripts/audit/agents/common.sh"
 
-REPOS=(
-  "Hopin-inc/civicship-api"
-  "Hopin-inc/civicship-portal"
-)
-
-REPO_DIRS=(
-  "$API_DIR"
-  "$PORTAL_DIR"
-)
-
 log "=== code-quality suggest 開始 $(date '+%Y-%m-%d %H:%M:%S') ==="
 
 for i in "${!REPOS[@]}"; do

@@ -3,8 +3,14 @@
 # 共通ユーティリティ（全エージェントからsourceして使う）
 # ============================================================
 
-API_DIR="/Users/naokisakata/ghq/github.com/Hopin-inc/civicship-api"
-PORTAL_DIR="/Users/naokisakata/ghq/github.com/Hopin-inc/civicship-portal"
+REPOS=(
+  "Hopin-inc/civicship-api"
+  "Hopin-inc/civicship-portal"
+)
+REPO_DIRS=(
+  "$HOME/ghq/github.com/Hopin-inc/civicship-api"
+  "$HOME/ghq/github.com/Hopin-inc/civicship-portal"
+)
 OLLAMA_MODEL="qwen2.5-coder:7b"
 OLLAMA_URL="http://127.0.0.1:11435/api/generate"
 DATE=$(date +"%Y-%m-%d")
