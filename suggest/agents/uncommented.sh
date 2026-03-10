@@ -63,11 +63,10 @@ for entry in "${findings[@]}"; do
   func_sig="$(echo "$entry" | cut -d: -f3-)"
 
   prompt="以下のTypeScript関数シグネチャに対してJSDocコメントを生成してください。
-@param・@returnsを含め、JSDocコメントのみ出力してください（前置き・コードブロック不要）。
+@description・@param・@returnsを含め、JSDocコメントのみ出力してください。
+前置き・コードブロック・バッククォートは不要です。
 
-${func_sig}
-
-JSDocコメントのみ出力してください。バッククォートやコードブロック記号は含めないこと。"
+${func_sig}"
 
   jsdoc="$(call_ollama "$prompt" | grep -v "^\`\`\`")"
 
