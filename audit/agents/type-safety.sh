@@ -14,12 +14,17 @@ for i in "${!REPOS[@]}"; do
   DIR="${REPO_DIRS[$i]}"
 
   log "🔍 [$REPO] any型検出中..."
-  cd "$DIR"
+  # [H-7] cd エラーを明示的にチェック（存在しないディレクトリでの誤実行を防止）
+  if ! cd "$DIR" 2>/dev/null; then
+    log "  ❌ リポジトリディレクトリが見つかりません: $DIR"
+    continue
+  fi
 
   EXISTING=$(get_existing_titles "$REPO")
 
   # 検出結果を一時ファイルに保存
-  DETECTIONS=$(grep -rn ": any[,;\) ]" src/ --include="*.ts" \
+  # [H-2] .tsx ファイルも対象に追加（React コンポーネントの any 型を検出）
+  DETECTIONS=$(grep -rn ": any[,;\) ]" src/ --include="*.ts" --include="*.tsx" \
     | grep -v "node_modules" \
     | grep -v "\.d\.ts" \
     | grep -v "// eslint-disable" \
@@ -57,10 +62,11 @@ for i in "${!REPOS[@]}"; do
     TITLE="[Refactor] any型の乱用: $short_file"
     BODY="## 場所\n\`$file:$line\`\n\n## 問題のコード\n\`\`\`typescript\n$code\`\`\`\n\n$BODY_CONTENT\n\n---\n_自動検出: type-safety agent ($DATE)_"
 
+    # [L-2] echo -e の代わりに printf で確実に改行展開
     gh issue create \
       --repo "$REPO" \
       --title "$TITLE" \
-      --body "$(echo -e "$BODY")" \
+      --body "$(printf '%b' "$BODY")" \
       --label "$LABELS" \
       2>>"$LOG_FILE" \
       && log "  ✅ 起票: $TITLE" \

@@ -8,12 +8,19 @@
 source "$(dirname "$0")/common.sh"
 
 # パッケージの実際の使用箇所をsrc/から検索
+# [C-5] grep に変数を直接展開せず -F オプションで固定文字列として扱う（インジェクション対策）
 get_package_usages() {
   local pkg="$1"
   local dir="$2"
 
-  grep -rn "from ['\"]${pkg}\|require(['\"]${pkg}" "$dir/src/" \
-    --include="*.ts" --include="*.tsx" \
+  if [[ ! -d "$dir/src/" ]]; then
+    return
+  fi
+
+  grep -rn --include="*.ts" --include="*.tsx" \
+    -e "from '${pkg}" -e "from \"${pkg}" \
+    -e "require('${pkg}" -e "require(\"${pkg}" \
+    "$dir/src/" \
     | grep -v "__tests__" \
     | grep -v "\.test\.ts" \
     | grep -v "\.spec\.ts" \
@@ -83,7 +90,8 @@ for i in "${!REPOS[@]}"; do
 
         TITLE="[Security] $package - $summary"
 
-        if issue_exists "$EXISTING" "$package"; then
+        # [M-3] パッケージ名の部分一致を防ぐため "[Security] $package" プレフィックスでマッチ
+        if issue_exists "$EXISTING" "[Security] $package"; then
           log "  ⏭️  スキップ（既存Issue）: $package"
           continue
         fi
@@ -115,10 +123,11 @@ for i in "${!REPOS[@]}"; do
 
         BODY="## パッケージ\n\`$package\`\n\n## 深刻度\n$severity\n\n## 修正バージョン\n\`$fixed_in\`\n\n$BODY_CONTENT\n\n## 使用箇所\n$USAGE_SECTION\n\n## リスク評価\n$RISK_EVAL\n\n---\n_自動検出: security agent ($DATE)_"
 
+        # [L-2] echo -e の代わりに printf で確実に改行展開
         gh issue create \
           --repo "$REPO" \
           --title "$TITLE" \
-          --body "$(echo -e "$BODY")" \
+          --body "$(printf '%b' "$BODY")" \
           --label "$LABELS" \
           2>>"$LOG_FILE" \
           && log "  ✅ 起票: $TITLE [$severity]" \

@@ -21,9 +21,10 @@ for i in "${!REPOS[@]}"; do
   fi
 
   log "[$repo_name] ---- 開始 ----"
-  bash "${AGENTS_DIR}/uncommented.sh" "$repo" "$repo_dir"
-  bash "${AGENTS_DIR}/naming.sh"      "$repo" "$repo_dir"
-  bash "${AGENTS_DIR}/complexity.sh"  "$repo" "$repo_dir"
+  # [L-3] set -euo pipefail 環境下でも後続エージェントが必ず実行されるよう || でエラーをキャッチ
+  bash "${AGENTS_DIR}/uncommented.sh" "$repo" "$repo_dir" || log "[$repo_name] ⚠️  uncommented 異常終了"
+  bash "${AGENTS_DIR}/naming.sh"      "$repo" "$repo_dir" || log "[$repo_name] ⚠️  naming 異常終了"
+  bash "${AGENTS_DIR}/complexity.sh"  "$repo" "$repo_dir" || log "[$repo_name] ⚠️  complexity 異常終了"
   log "[$repo_name] ---- 完了 ----"
 done
 

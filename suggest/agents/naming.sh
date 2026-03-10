@@ -65,7 +65,14 @@ ${func_list}
 
 result="$(call_ollama "$prompt")"
 
-if echo "$result" | grep -qi "改善候補なし\|問題なし\|特になし"; then
+# [M-7] Ollama が空文字を返した場合もスキップ
+if [[ -z "$result" ]]; then
+  log "[$REPO_NAME] naming: AI応答なし、スキップ"
+  exit 0
+fi
+
+# [M-7] 「改善候補なし」の判定パターンを限定的に（過剰マッチを防止）
+if echo "$result" | grep -qiE "^改善候補なし$"; then
   log "[$REPO_NAME] naming: 改善候補なし、スキップ"
   exit 0
 fi
@@ -79,10 +86,11 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
+# [L-2] echo -e の代わりに printf で確実に改行展開
 gh issue create \
   --repo "$REPO" \
   --title "$title" \
-  --body "$(echo -e "$body")" \
+  --body "$(printf '%b' "$body")" \
   --label "refactor" \
   --label "Priority: Low"
 

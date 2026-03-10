@@ -86,10 +86,11 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
+# [L-2] echo -e の代わりに printf で確実に改行展開
 gh issue create \
   --repo "$REPO" \
   --title "$title" \
-  --body "$(echo -e "$body")" \
+  --body "$(printf '%b' "$body")" \
   --label "refactor" \
   --label "Priority: Low"
 

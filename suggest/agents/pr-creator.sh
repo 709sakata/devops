@@ -15,6 +15,12 @@ ANTHROPIC_API_KEY="${ANTHROPIC_API_KEY:-}"
 CLAUDE_MODEL="claude-sonnet-4-6"
 DATE=$(date +"%Y%m%d")
 
+# [C-4] API キーが未設定の場合は早期終了
+if [[ -z "$ANTHROPIC_API_KEY" ]]; then
+  log "[$REPO_NAME] pr-creator: ANTHROPIC_API_KEY が未設定です。終了します。"
+  exit 1
+fi
+
 log "[$REPO_NAME] pr-creator: 開始"
 
 # ----------------------------------------------------------
@@ -133,17 +139,41 @@ Issue番号: ${issue_numbers}
   # ブランチ作成
   local branch="suggest/${branch_prefix}-${DATE}"
   cd "$REPO_DIR"
-  git checkout master 2>/dev/null || git checkout main 2>/dev/null
-  git pull origin master 2>/dev/null || git pull origin main 2>/dev/null
-  git checkout -b "$branch"
+
+  # [H-6] デフォルトブランチを動的に取得（master/main ハードコード廃止）
+  local default_branch
+  default_branch=$(gh repo view "$REPO" --json defaultBranchRef --jq .defaultBranchRef.name 2>/dev/null)
+  if [[ -z "$default_branch" ]]; then
+    default_branch="main"
+    log "[$REPO_NAME] ⚠️  デフォルトブランチ取得失敗。main にフォールバック"
+  fi
+
+  # [L-4] checkout 失敗を明示的に検出
+  if ! git checkout "$default_branch" 2>/dev/null; then
+    log "[$REPO_NAME] pr-creator[$category]: ブランチ '$default_branch' への切り替え失敗、スキップ"
+    return
+  fi
+  git pull origin "$default_branch"
+
+  # [H-5] 同日に既にブランチが存在する場合は再利用（set -e でクラッシュしない）
+  git checkout "$branch" 2>/dev/null || git checkout -b "$branch"
 
   # ファイルを書き込み
+  # [C-3] AI 生成コンテンツを無検証で上書きしない: 長さを確認し printf で安全に書き込む
   echo "$files_json" | jq -c '.[]' | while IFS= read -r file_obj; do
     local path content
     path=$(echo "$file_obj" | jq -r '.path')
     content=$(echo "$file_obj" | jq -r '.content')
     local full_path="${REPO_DIR}/${path}"
-    echo "$content" > "$full_path"
+
+    # 空コンテンツは書き込みをスキップして既存ファイルを保護
+    if [[ -z "$content" ]]; then
+      log "[$REPO_NAME] ⚠️  空コンテンツのためスキップ: $path"
+      continue
+    fi
+
+    # [C-3] echo の代わりに printf で安全に書き込み（-e/-n 等の誤動作を防止）
+    printf '%s\n' "$content" > "$full_path"
     git add "$full_path"
     log "[$REPO_NAME] 修正適用: $path"
   done
@@ -153,19 +183,20 @@ Issue番号: ${issue_numbers}
   git push origin "$branch"
 
   # PR作成
+  # [H-6] ベースブランチを動的取得した default_branch を使用
   gh pr create \
     --repo "$REPO" \
     --title "$pr_title" \
     --body "$pr_body" \
-    --base master \
+    --base "$default_branch" \
     --head "$branch" \
     --label "refactor" \
     --label "Priority: Low"
 
   log "[$REPO_NAME] pr-creator[$category]: PR作成完了"
 
-  # 元のブランチに戻る
-  git checkout master 2>/dev/null || git checkout main 2>/dev/null
+  # 元のブランチに戻る（[L-4] 失敗しても続行）
+  git checkout "$default_branch" 2>/dev/null || true
 }
 
 # ----------------------------------------------------------
