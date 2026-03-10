@@ -56,9 +56,9 @@ ${usages}
   fi
 }
 
-for REPO_INFO in "Hopin-inc/civicship-api:$API_DIR" "Hopin-inc/civicship-portal:$PORTAL_DIR"; do
-  REPO="${REPO_INFO%%:*}"
-  DIR="${REPO_INFO##*:}"
+for i in "${!REPOS[@]}"; do
+  REPO="${REPOS[$i]}"
+  DIR="${REPO_DIRS[$i]}"
 
   log "🔒 [$REPO] Dependabotセキュリティアラート監査..."
 
