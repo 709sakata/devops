@@ -15,7 +15,7 @@ log "🚀 nightly-audit 開始 ($DATE)"
 # [M-2] Ollama の疎通確認を /api/tags エンドポイントで HTTP ステータスまで検証
 OLLAMA_OK=false
 for i in 1 2 3; do
-  if curl -sf "http://127.0.0.1:11435/api/tags" > /dev/null 2>&1; then
+  if curl -sf "http://127.0.0.1:11434/api/tags" > /dev/null 2>&1; then
     OLLAMA_OK=true
     break
   fi
