@@ -61,18 +61,25 @@ case "$REPO_NAME" in
   *)       project_context="TypeScriptプロジェクト" ;;
 esac
 
-prompt="以下は${project_context}のファイルごとの関数名一覧です。
-次の観点で問題のある関数名を最大10件ピックアップし、改善案と理由を日本語で示してください：
-- 名前が短すぎる・省略しすぎ（例: handle, proc, doIt）
-- 動詞がない・意味が広すぎる（例: data, info, manager）
-- 否定形や二重否定で意図が読みにくい
-- ドメイン用語と乖離している
+prompt="以下は${project_context}の関数名一覧です。問題のある命名を最大10件ピックアップしてください。
 
-問題のない関数名は無視し、改善候補がなければ「改善候補なし」とだけ返してください。
+## レビュー基準（いずれかに該当するもの）
+- 短すぎ・省略過多: handle, proc, doIt, get, set, run, exec, process
+- 動詞なし・意味広すぎ: data, info, manager, helper, utils, stuff, obj, tmp
+- 否定形・二重否定: notEmpty, isNotValid, noError（肯定形に書き換えられるもの）
+- 動詞と目的語の組み合わせが不自然: getUserData（User は既にデータ概念を含む）
+- ドメイン用語との乖離（civicship では Participant / Community / Ticket / Reservation 等が重要語）
+
+## 対象リスト
 
 ${func_list}
 
-前置き・後書き不要。改善候補がある場合は「元の名前 → 改善案: 理由」の形式で答えてください。"
+## 出力形式（厳守）
+
+改善候補がある場合: 「元の名前 → 改善案: 理由（1行）」を列挙（最大10件）
+改善候補がない場合: 「改善候補なし」とだけ返す
+
+前置き・後書き不要。問題のない命名には言及しないこと。"
 
 result="$(call_ollama "$prompt")"
 
