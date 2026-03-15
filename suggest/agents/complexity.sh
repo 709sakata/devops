@@ -63,7 +63,8 @@ detect() {
   done < <(find "$src_dir" \( -name "*.ts" -o -name "*.tsx" \) 2>/dev/null | grep -v "__tests__" | grep -v "__generated__" | sort | head -50)
 }
 
-mapfile -t findings < <(detect) || true
+findings=()
+while IFS= read -r line; do findings+=("$line"); done < <(detect) || true
 
 if [[ ${#findings[@]} -eq 0 ]]; then
   log "[$REPO_NAME] complexity: 検出なし、スキップ"

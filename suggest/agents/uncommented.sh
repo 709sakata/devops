@@ -45,7 +45,8 @@ detect() {
 # ----------------------------------------------------------
 
 # Ollamaへの汎用呼び出し（common.shのgenerate_issue_bodyとは別用途）
-mapfile -t findings < <(detect) || true
+findings=()
+while IFS= read -r line; do findings+=("$line"); done < <(detect) || true
 
 if [[ ${#findings[@]} -eq 0 ]]; then
   log "[$REPO_NAME] uncommented: 検出なし、スキップ"
