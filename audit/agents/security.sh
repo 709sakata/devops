@@ -68,7 +68,7 @@ for i in "${!REPOS[@]}"; do
 
   EXISTING=$(get_existing_titles "$REPO")
 
-  gh api repos/$REPO/dependabot/alerts \
+  gh api "repos/${REPO}/dependabot/alerts" \
     --jq '.[] | select(.state == "open") | [
       .dependency.package.name,
       .security_advisory.severity,
