@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # ============================================================
 # 🔒 security.sh
 # Dependabotアラート検出 → 使用箇所評価 → Issue起票
@@ -29,6 +30,7 @@ get_package_usages() {
 }
 
 # 使用箇所をOllamaにリスク評価させる
+# [L-1] call_ollama を再利用（重複 curl 実装を廃止）
 evaluate_usage_risk() {
   local pkg="$1"
   local vuln="$2"
@@ -39,22 +41,17 @@ evaluate_usage_risk() {
     return
   fi
 
-  local response
-  response=$(curl -s --max-time 30 "$OLLAMA_URL" \
-    -H "Content-Type: application/json" \
-    -d "{
-      \"model\": \"$OLLAMA_MODEL\",
-      \"prompt\": $(echo "パッケージ「${pkg}」の脆弱性「${vuln}」について評価してください。
+  local prompt="パッケージ「${pkg}」の脆弱性「${vuln}」について評価してください。
 以下の使用箇所からユーザー入力が流れ込むリスクを判断してください：
 
 ${usages}
 
 以下の形式で答えてください：
 リスク評価: 高/中/低
-理由: （1文）" | jq -Rs .),
-      \"stream\": false,
-      \"options\": { \"temperature\": 0.1, \"num_ctx\": 1024, \"num_predict\": 100 }
-    }" | jq -r '.response // ""')
+理由: （1文）"
+
+  local response
+  response=$(call_ollama "$prompt")
 
   if [ -z "$response" ]; then
     echo "リスク評価: 不明（AI分析失敗）"
@@ -71,7 +68,7 @@ for i in "${!REPOS[@]}"; do
 
   EXISTING=$(get_existing_titles "$REPO")
 
-  gh api repos/$REPO/dependabot/alerts \
+  gh api "repos/${REPO}/dependabot/alerts" \
     --jq '.[] | select(.state == "open") | [
       .dependency.package.name,
       .security_advisory.severity,

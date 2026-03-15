@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # ============================================================
 # 🔍 eslint.sh
 # ESLintエラー検出 → Issue起票
@@ -14,7 +15,11 @@ for i in "${!REPOS[@]}"; do
   DIR="${REPO_DIRS[$i]}"
 
   log "🔍 [$REPO] ESLint検出中..."
-  cd "$DIR"
+  # [H-7] cd エラーを明示的にチェック（存在しないディレクトリでの誤実行を防止）
+  if ! cd "$DIR" 2>/dev/null; then
+    log "  ❌ リポジトリディレクトリが見つかりません: $DIR"
+    continue
+  fi
 
   # pnpmのパス確認
   if ! check_pnpm; then
