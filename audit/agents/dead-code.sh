@@ -15,7 +15,8 @@ source "${SCRIPT_DIR}/common.sh"
 # [P0-2] 必須コマンドの事前検証
 require_command gh || exit 1
 
-MAX_ISSUES=15
+# [P2-1] MAX_ISSUES を config.sh の定数で統一（dead-code は suggest 系と同等の上限）
+MAX_ISSUES="$MAX_SUGGEST_FILES"
 
 for i in "${!REPOS[@]}"; do
   REPO="${REPOS[$i]}"
@@ -81,13 +82,20 @@ for i in "${!REPOS[@]}"; do
   fi
 
   # Ollamaで分析コメント生成
-  PROMPT="以下のTypeScript未使用エクスポート候補を確認してください。
-各シンボルが本当に不要か、または index.ts 経由で re-export されている可能性も考慮し、
-削除・整理の優先度を日本語で簡潔に提案してください。
+  PROMPT="TypeScript の未使用エクスポート候補を分析してください。
+
+## 注意事項
+- index.ts 経由の re-export は検出できません（手動確認推奨）
+- 動的インポート（import()）も検出対象外です
+
+## 候補リスト
 
 $(echo -e "$DEAD_CANDIDATES" | sed 's/| `//g; s/` |//g; s/|//g' | head -15)
 
-前置き・後書き不要。「シンボル名: 提案」の形式で答えてください。"
+## 出力形式（厳守）
+
+「シンボル名: 削除推奨 / 要確認 / 保留 — 理由（1文）」の形式で列挙してください。
+前置き・後書き不要。"
 
   SUGGESTION="$(call_ollama "$PROMPT")"
 

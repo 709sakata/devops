@@ -70,9 +70,16 @@ for entry in "${findings[@]}"; do
   lineno="$(echo  "$entry" | cut -d: -f2)"
   func_sig="$(echo "$entry" | cut -d: -f3-)"
 
-  prompt="以下のTypeScript関数シグネチャに対してJSDocコメントを生成してください。
-@description・@param・@returnsを含め、JSDocコメントのみ出力してください。
-前置き・コードブロック・バッククォートは不要です。
+  prompt="TypeScript 関数の JSDoc を生成してください。
+
+## 要件
+- JSDoc コメントのみ出力（バッククォート・コードブロック・前置き・後書き不要）
+- @description: 関数の目的と副作用（あれば）を1文で。「何をするか」より「なぜ存在するか」を優先
+- @param: 各引数の意味を説明（型注釈は省略 — TypeScript が保持するため）
+- @returns: 戻り値の意味（void / Promise<void> なら省略可）
+- 実装を見れば自明な内容（例: 「引数を受け取り処理を行う」）は書かない
+
+## 対象関数
 
 ${func_sig}"
 
