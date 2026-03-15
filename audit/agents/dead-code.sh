@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck shell=bash
 set -euo pipefail
 # ============================================================
 # 🧹 dead-code.sh
@@ -6,7 +7,13 @@ set -euo pipefail
 # 実行頻度: 火曜日
 # ============================================================
 
-source "$(dirname "$0")/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=./common.sh
+source "${SCRIPT_DIR}/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 MAX_ISSUES=15
 
@@ -100,15 +107,8 @@ $(echo -e "$DEAD_CANDIDATES" | sed 's/| `//g; s/` |//g; s/|//g' | head -15)
   BODY+="\n### 💡 整理提案\n\n${SUGGESTION}\n"
   BODY+="\n---\n_自動検出: dead-code agent ($DATE)_"
 
-  gh issue create \
-    --repo "$REPO" \
-    --title "$TITLE" \
-    --body "$(printf '%b' "$BODY")" \
-    --label "refactor" \
-    --label "Priority: Low" \
-    2>>"$LOG_FILE" \
-    && log "  ✅ 起票: $TITLE" \
-    || log "  ⚠️  起票失敗: $TITLE (詳細: $LOG_FILE)"
+  # [P4] create_issue 共通関数で起票
+  create_issue "$REPO" "$TITLE" "$BODY" "refactor" "Priority: Low"
 
   log "✅ [$REPO] 未使用エクスポート検出 完了"
 done

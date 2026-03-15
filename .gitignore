@@ -2,3 +2,4 @@ audit/logs/
 suggest/logs/
 .env
 *.log
+*.jsonl

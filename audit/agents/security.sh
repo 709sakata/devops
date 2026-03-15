@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck shell=bash
 set -euo pipefail
 # ============================================================
 # 🔒 security.sh
@@ -6,7 +7,14 @@ set -euo pipefail
 # 実行頻度: 毎晩
 # ============================================================
 
-source "$(dirname "$0")/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=./common.sh
+source "${SCRIPT_DIR}/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh   || exit 1
+require_command curl || exit 1
 
 # パッケージの実際の使用箇所をsrc/から検索
 # [C-5] grep に変数を直接展開せず -F オプションで固定文字列として扱う（インジェクション対策）
@@ -120,15 +128,9 @@ for i in "${!REPOS[@]}"; do
 
         BODY="## パッケージ\n\`$package\`\n\n## 深刻度\n$severity\n\n## 修正バージョン\n\`$fixed_in\`\n\n$BODY_CONTENT\n\n## 使用箇所\n$USAGE_SECTION\n\n## リスク評価\n$RISK_EVAL\n\n---\n_自動検出: security agent ($DATE)_"
 
-        # [L-2] echo -e の代わりに printf で確実に改行展開
-        gh issue create \
-          --repo "$REPO" \
-          --title "$TITLE" \
-          --body "$(printf '%b' "$BODY")" \
-          --label "$LABELS" \
-          2>>"$LOG_FILE" \
-          && log "  ✅ 起票: $TITLE [$severity]" \
-          || log "  ⚠️  起票失敗: $TITLE (詳細: $LOG_FILE)"
+        # [P4] create_issue 共通関数で起票（ログ・エラー処理を一元化）
+        # shellcheck disable=SC2086
+        create_issue "$REPO" "$TITLE" "$BODY" $LABELS
       done
 
   log "✅ [$REPO] Dependabotセキュリティアラート監査 完了"

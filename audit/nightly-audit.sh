@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck shell=bash
 set -euo pipefail
 # [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
 SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
@@ -7,14 +8,19 @@ DATE=$(date +"%Y-%m-%d")
 mkdir -p "$LOG_DIR"
 LOG_FILE="$LOG_DIR/$DATE.log"
 
+# [P1-1] 相関ID — 同一実行に属するログを横断検索可能にする
+export RUN_ID
+RUN_ID="$(date +%Y%m%d-%H%M%S)-$$"
+
 log() {
   echo "[$(date +'%H:%M:%S')] $1" | tee -a "$LOG_FILE"
 }
 
 # 30日以上前のログを削除（ログローテーション）
 find "$LOG_DIR" -name "*.log" -mtime +30 -delete 2>/dev/null || true
+find "$LOG_DIR" -name "*.jsonl" -mtime +30 -delete 2>/dev/null || true
 
-log "🚀 nightly-audit 開始 ($DATE)"
+log "🚀 nightly-audit 開始 ($DATE) [RUN_ID=$RUN_ID]"
 
 # [M-2] Ollama の疎通確認を /api/tags エンドポイントで HTTP ステータスまで検証
 OLLAMA_OK=false

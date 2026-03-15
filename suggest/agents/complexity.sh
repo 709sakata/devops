@@ -10,7 +10,11 @@ set -euo pipefail
 
 # [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
 SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=../../audit/agents/common.sh
 source "${SCRIPT_DIR}/../../audit/agents/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 REPO="$1"
 REPO_DIR="$2"
@@ -18,7 +22,8 @@ REPO_NAME="$(basename "$REPO")"
 
 MAX_LINES=20
 MAX_NEST=3
-MAX_ISSUES=10
+# [P2-1] MAX_ISSUES を config.sh の定数で統一
+MAX_ISSUES="$MAX_SUGGEST_FILES"
 
 log "[$REPO_NAME] complexity: 開始"
 
@@ -84,12 +89,12 @@ for entry in "${findings[@]}"; do
   lines="$(echo    "$entry" | cut -d: -f4)"
   nest="$(echo     "$entry" | cut -d: -f5)"
 
-  # 関数の実コードを抽出（最大40行）
+  # 関数の実コードを抽出（[P2-1] MAX_COMPLEXITY_LINES を定数化）
   # [H-3] off-by-one 修正: 終端行は start + lines - 1（start が func_lines に含まれるため）
   full_path="${REPO_DIR}/${rel_path}"
   func_code=""
   if [[ -f "$full_path" ]]; then
-    func_code="$(sed -n "${start},$((start + lines - 1))p" "$full_path" | head -40)"
+    func_code="$(sed -n "${start},$((start + lines - 1))p" "$full_path" | head -"$MAX_COMPLEXITY_LINES")"
   fi
 
   table_rows+="| \`${rel_path}:${start}\` | \`${name}\` | ${lines} | ${nest} |\n"
@@ -126,12 +131,7 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
-# [L-2] echo -e の代わりに printf で確実に改行展開
-gh issue create \
-  --repo "$REPO" \
-  --title "$title" \
-  --body "$(printf '%b' "$body")" \
-  --label "refactor" \
-  --label "Priority: Low"
+# [P4] create_issue 共通関数で起票
+create_issue "$REPO" "$title" "$body" "refactor" "Priority: Low"
 
 log "[$REPO_NAME] complexity: Issue起票完了"

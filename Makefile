@@ -7,7 +7,7 @@ SUGGEST_DIR := $(REPO_ROOT)/suggest
 LOG_DIR := $(AUDIT_DIR)/logs
 TODAY := $(shell date +"%Y-%m-%d")
 
-.PHONY: audit suggest health logs clean-logs help
+.PHONY: audit suggest health logs clean-logs lint test help
 
 ## audit: nightly-audit.sh を手動実行
 audit:
@@ -54,6 +54,20 @@ logs:
 clean-logs:
 	@echo "30日以上前のログを削除中..."
 	@find "$(LOG_DIR)" -name "*.log" -mtime +30 -delete 2>/dev/null && echo "✅ 完了" || echo "ℹ️  削除対象なし"
+	@find "$(LOG_DIR)" -name "*.jsonl" -mtime +30 -delete 2>/dev/null || true
+
+## lint: ShellCheck で全スクリプトを静的解析
+lint:
+	@command -v shellcheck > /dev/null || { echo "ShellCheck が必要です: brew install shellcheck"; exit 1; }
+	@echo "=== ShellCheck ==="
+	@find "$(REPO_ROOT)" -name "*.sh" ! -path "*/.git/*" \
+		| xargs shellcheck --shell=bash --severity=warning
+	@echo "✅ lint 完了"
+
+## test: パースロジックの単体テスト
+test:
+	@echo "=== 単体テスト ==="
+	@bash "$(REPO_ROOT)/tests/test_common.sh"
 
 ## help: 使用可能なターゲット一覧を表示
 help:
