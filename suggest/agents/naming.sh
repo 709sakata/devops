@@ -10,12 +10,17 @@ set -euo pipefail
 
 # [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
 SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=../../audit/agents/common.sh
 source "${SCRIPT_DIR}/../../audit/agents/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 REPO="$1"
 REPO_DIR="$2"
 REPO_NAME="$(basename "$REPO")"
-MAX_FILES=15
+# [P2-1] MAX_NAMING_FILES を config.sh の定数で統一
+MAX_FILES="$MAX_NAMING_FILES"
 
 log "[$REPO_NAME] naming: 開始"
 
@@ -92,12 +97,7 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
-# [L-2] echo -e の代わりに printf で確実に改行展開
-gh issue create \
-  --repo "$REPO" \
-  --title "$title" \
-  --body "$(printf '%b' "$body")" \
-  --label "refactor" \
-  --label "Priority: Low"
+# [P4] create_issue 共通関数で起票
+create_issue "$REPO" "$title" "$body" "refactor" "Priority: Low"
 
 log "[$REPO_NAME] naming: Issue起票完了"

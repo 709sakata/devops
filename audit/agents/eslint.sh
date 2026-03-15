@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck shell=bash
 set -euo pipefail
 # ============================================================
 # 🔍 eslint.sh
@@ -6,7 +7,13 @@ set -euo pipefail
 # 実行頻度: 月・水・金
 # ============================================================
 
-source "$(dirname "$0")/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=./common.sh
+source "${SCRIPT_DIR}/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 LABELS=$(resolve_labels "eslint")
 
@@ -53,7 +60,7 @@ for i in "${!REPOS[@]}"; do
     | grep -v "generated" \
     | grep -v "graphql\.ts" \
     | awk -F"$SEP" '!seen[$1]++' \
-    | head -20)
+    | head -"$MAX_ESLINT_FILES")
 
   if [ -z "$DETECTIONS" ]; then
     log "  ℹ️  除外後は検出なし"
@@ -80,15 +87,9 @@ for i in "${!REPOS[@]}"; do
     TITLE="[Refactor] ESLint: $rule in ${short_file##src/}"
     BODY="## 場所\n\`$short_file:$line\`\n\n## ESLintルール\n\`$rule\`\n\n## エラー内容\n$message\n\n$BODY_CONTENT\n\n---\n_自動検出: eslint agent ($DATE)_"
 
-    # [L-2] echo -e の代わりに printf で確実に改行展開
-    gh issue create \
-      --repo "$REPO" \
-      --title "$TITLE" \
-      --body "$(printf '%b' "$BODY")" \
-      --label "$LABELS" \
-      2>>"$LOG_FILE" \
-      && log "  ✅ 起票: $TITLE" \
-      || log "  ⚠️  起票失敗: $TITLE (詳細: $LOG_FILE)"
+    # [P4] create_issue 共通関数で起票
+    # shellcheck disable=SC2086
+    create_issue "$REPO" "$TITLE" "$BODY" $LABELS
   done <<< "$DETECTIONS"
 
   log "✅ [$REPO] ESLint検出 完了"

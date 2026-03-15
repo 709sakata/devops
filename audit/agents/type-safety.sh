@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck shell=bash
 set -euo pipefail
 # ============================================================
 # 🔍 type-safety.sh
@@ -6,7 +7,13 @@ set -euo pipefail
 # 実行頻度: 月・水・金
 # ============================================================
 
-source "$(dirname "$0")/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=./common.sh
+source "${SCRIPT_DIR}/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 LABELS=$(resolve_labels "any_type")
 
@@ -25,6 +32,7 @@ for i in "${!REPOS[@]}"; do
 
   # 検出結果を一時ファイルに保存
   # [H-2] .tsx ファイルも対象に追加（React コンポーネントの any 型を検出）
+  # [P2-1] MAX_ANY_TYPE_FILES を config.sh の定数で統一
   DETECTIONS=$(grep -rn ": any[,;\) ]" src/ --include="*.ts" --include="*.tsx" \
     | grep -v "node_modules" \
     | grep -v "\.d\.ts" \
@@ -36,7 +44,7 @@ for i in "${!REPOS[@]}"; do
     | grep -v "generated" \
     | grep -v "graphql\.ts" \
     | awk -F: '!seen[$1]++' \
-    | head -20)
+    | head -"$MAX_ANY_TYPE_FILES")
 
   if [ -z "$DETECTIONS" ]; then
     log "  ℹ️  検出なし"
@@ -63,15 +71,9 @@ for i in "${!REPOS[@]}"; do
     TITLE="[Refactor] any型の乱用: $short_file"
     BODY="## 場所\n\`$file:$line\`\n\n## 問題のコード\n\`\`\`typescript\n$code\`\`\`\n\n$BODY_CONTENT\n\n---\n_自動検出: type-safety agent ($DATE)_"
 
-    # [L-2] echo -e の代わりに printf で確実に改行展開
-    gh issue create \
-      --repo "$REPO" \
-      --title "$TITLE" \
-      --body "$(printf '%b' "$BODY")" \
-      --label "$LABELS" \
-      2>>"$LOG_FILE" \
-      && log "  ✅ 起票: $TITLE" \
-      || log "  ⚠️  起票失敗: $TITLE (詳細: $LOG_FILE)"
+    # [P4] create_issue 共通関数で起票
+    # shellcheck disable=SC2086
+    create_issue "$REPO" "$TITLE" "$BODY" $LABELS
   done
 
   log "✅ [$REPO] any型検出 完了"

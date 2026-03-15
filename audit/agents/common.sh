@@ -1,8 +1,45 @@
 #!/bin/bash
+# shellcheck shell=bash
 # ============================================================
 # 共通ユーティリティ（全エージェントからsourceして使う）
 # ============================================================
 
+# [C-2] LOG_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
+_COMMON_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
+LOG_DIR="${_COMMON_DIR}/../logs"
+LOG_FILE="$LOG_DIR/$(date +"%Y-%m-%d").log"
+mkdir -p "$LOG_DIR"
+
+# ----------------------------------------------------------
+# [P2-1] 定数を config.sh から読み込む（変更は config.sh のみ）
+# ----------------------------------------------------------
+# shellcheck source=./config.sh
+source "${_COMMON_DIR}/config.sh"
+
+# ----------------------------------------------------------
+# [P0-1] PATH 正規化 — cron 環境では /usr/local/bin 等が欠落する
+# 本関数は common.sh の source 直後に自動実行される
+# ----------------------------------------------------------
+setup_path() {
+  local additions=(
+    "/usr/local/bin"
+    "/opt/homebrew/bin"
+    "$HOME/.npm-global/bin"
+    "/usr/local/sbin"
+  )
+  local p
+  for p in "${additions[@]}"; do
+    # [P0-1] if文で記述: [[ ]] && は set -e 環境でfalsy時に終了コード1を返すため使用しない
+    if [[ ":$PATH:" != *":$p:"* ]]; then
+      export PATH="$p:$PATH"
+    fi
+  done
+}
+setup_path
+
+# ----------------------------------------------------------
+# ターゲットリポジトリ
+# ----------------------------------------------------------
 REPOS=(
   "Hopin-inc/civicship-api"
   "Hopin-inc/civicship-portal"
@@ -11,18 +48,72 @@ REPO_DIRS=(
   "$HOME/ghq/github.com/Hopin-inc/civicship-api"
   "$HOME/ghq/github.com/Hopin-inc/civicship-portal"
 )
-OLLAMA_MODEL="qwen2.5-coder:7b"
-OLLAMA_URL="http://127.0.0.1:11434/api/generate"
 DATE=$(date +"%Y-%m-%d")
-# [C-2] LOG_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
-# common.sh は audit/agents/ に置かれているため、その2階層上が audit/ になる
-_COMMON_DIR="$(cd "$(dirname "$(realpath "${BASH_SOURCE[0]}")")" && pwd)"
-LOG_DIR="${_COMMON_DIR}/../logs"
-LOG_FILE="$LOG_DIR/$DATE.log"
-mkdir -p "$LOG_DIR"
 
+# ----------------------------------------------------------
+# ログ関数
+# ----------------------------------------------------------
 log() {
   echo "[$(date +'%H:%M:%S')] $1" | tee -a "$LOG_FILE"
+}
+
+# [P1-1] 構造化ログ（JSONL形式）— run_id による相関追跡が可能
+# 使い方: log_json "INFO" "メッセージ" "key1" "val1" "key2" "val2"
+log_json() {
+  local level="$1" msg="$2"
+  shift 2
+  local json
+  json="$(jq -n \
+    --arg ts  "$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+    --arg lvl "$level" \
+    --arg msg "$msg" \
+    --arg run "${RUN_ID:-}" \
+    '{ts: $ts, level: $lvl, msg: $msg, run_id: $run}')"
+  # 追加フィールドを key=value ペアで受け取る
+  while [[ $# -ge 2 ]]; do
+    json="$(printf '%s' "$json" | jq --arg k "$1" --arg v "$2" '. + {($k): $v}')"
+    shift 2
+  done
+  printf '%s\n' "$json" >> "${LOG_FILE%.log}.jsonl"
+  log "$level $msg"
+}
+
+# ----------------------------------------------------------
+# [P0-2] 依存コマンド事前検証
+# 使い方: require_command gh || exit 1
+# ----------------------------------------------------------
+require_command() {
+  local cmd="$1"
+  if ! command -v "$cmd" > /dev/null 2>&1; then
+    log "❌ 必須コマンドが見つかりません: $cmd (PATH=$PATH)"
+    return 1
+  fi
+}
+
+# ----------------------------------------------------------
+# [P4] Issue作成の共通関数（DRY）
+# 使い方: create_issue "$REPO" "$TITLE" "$BODY" "label1" "label2"
+# ----------------------------------------------------------
+create_issue() {
+  local repo="$1" title="$2" body="$3"
+  shift 3
+  local label_args=()
+  for label in "$@"; do label_args+=(--label "$label"); done
+
+  local result
+  if result="$(gh issue create \
+      --repo "$repo" \
+      --title "$title" \
+      --body "$(printf '%b' "$body")" \
+      "${label_args[@]}" 2>&1)"; then
+    log_json "INFO" "issue created" "repo" "$repo" "title" "$title"
+    return 0
+  else
+    log_json "WARN" "issue creation failed" \
+      "repo" "$repo" "title" "$title" "error" "$result"
+    printf '%s\n' "$result" >> "$LOG_FILE"
+    return 1
+  fi
 }
 
 # ============================================================
@@ -64,22 +155,24 @@ generate_issue_body() {
       ;;
   esac
 
-  # [L-1] call_ollama を再利用（max-time はデフォルトの60秒、num_ctx=1024 で短縮）
-  local response
-  response=$(curl -s --max-time 30 "$OLLAMA_URL" \
+  # [P3-1] jq -n でJSON構築（bash文字列補間によるインジェクション防止）
+  local body result
+  body="$(jq -n \
+    --arg model  "$OLLAMA_MODEL" \
+    --arg prompt "$prompt" \
+    --argjson ctx  1024 \
+    --argjson pred 200 \
+    '{model: $model, prompt: $prompt, stream: false,
+      options: {temperature: 0.1, num_ctx: $ctx, num_predict: $pred}}')"
+  result="$(curl -s --max-time "$OLLAMA_TIMEOUT_SHORT" "$OLLAMA_URL" \
     -H "Content-Type: application/json" \
-    -d "{
-      \"model\": \"$OLLAMA_MODEL\",
-      \"prompt\": $(echo "$prompt" | jq -Rs .),
-      \"stream\": false,
-      \"options\": { \"temperature\": 0.1, \"num_ctx\": 1024, \"num_predict\": 200 }
-    }" | jq -r '.response // ""')
+    -d "$body" | jq -r '.response // ""')"
 
   # [M-8] 生成失敗・空の場合はフォールバックテキストを返す
-  if [ -z "$response" ]; then
+  if [[ -z "$result" ]]; then
     echo "※ AI分析生成失敗。手動で確認してください。"
   else
-    echo "$response"
+    echo "$result"
   fi
 }
 
@@ -145,16 +238,19 @@ check_pnpm() {
 }
 
 # ----------------------------------------------------------
-# Ollama汎用呼び出し
+# [P3-1] Ollama汎用呼び出し — jq -n で安全にJSON構築
 # ----------------------------------------------------------
 call_ollama() {
   local prompt="$1"
-  curl -s --max-time 60 "$OLLAMA_URL" \
+  local timeout="${2:-$OLLAMA_TIMEOUT_LONG}"
+  local body
+  body="$(jq -n \
+    --arg model  "$OLLAMA_MODEL" \
+    --arg prompt "$prompt" \
+    '{model: $model, prompt: $prompt, stream: false,
+      options: {temperature: 0.1, num_ctx: 2048, num_predict: 400}}')"
+  curl -s --max-time "$timeout" "$OLLAMA_URL" \
     -H "Content-Type: application/json" \
-    -d "{
-      \"model\": \"$OLLAMA_MODEL\",
-      \"prompt\": $(echo "$prompt" | jq -Rs .),
-      \"stream\": false,
-      \"options\": { \"temperature\": 0.1, \"num_ctx\": 2048, \"num_predict\": 400 }
-    }" | jq -r '.response // ""'
+    -d "$body" \
+    | jq -r '.response // ""'
 }

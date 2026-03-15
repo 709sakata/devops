@@ -10,12 +10,17 @@ set -euo pipefail
 
 # [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
 SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# shellcheck source=../../audit/agents/common.sh
 source "${SCRIPT_DIR}/../../audit/agents/common.sh"
+
+# [P0-2] 必須コマンドの事前検証
+require_command gh || exit 1
 
 REPO="$1"
 REPO_DIR="$2"
 REPO_NAME="$(basename "$REPO")"
-MAX_ISSUES=10
+# [P2-1] MAX_SUGGEST_FILES を config.sh の定数で統一
+MAX_ISSUES="$MAX_SUGGEST_FILES"
 
 log "[$REPO_NAME] uncommented: 開始"
 
@@ -31,7 +36,7 @@ detect() {
     --exclude-dir="__tests__" --exclude-dir="__generated__" \
     -E "^export (async )?function |^export const [A-Za-z_][A-Za-z0-9_]* = (async )?\(" \
     "$src_dir" 2>/dev/null \
-  | head -60 \
+  | head -"$MAX_DEAD_CODE_LINES" \
   | while IFS=: read -r file lineno rest; do
       prev=""
       [[ "$lineno" -gt 1 ]] && prev="$(sed -n "$((lineno - 1))p" "$file")"
@@ -88,12 +93,7 @@ if issue_exists "$existing_titles" "$title"; then
   exit 0
 fi
 
-# [L-2] echo -e の代わりに printf で確実に改行展開
-gh issue create \
-  --repo "$REPO" \
-  --title "$title" \
-  --body "$(printf '%b' "$body")" \
-  --label "refactor" \
-  --label "Priority: Low"
+# [P4] create_issue 共通関数で起票
+create_issue "$REPO" "$title" "$body" "refactor" "Priority: Low"
 
 log "[$REPO_NAME] uncommented: Issue起票完了"
