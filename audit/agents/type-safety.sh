@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 # ============================================================
 # 🔍 type-safety.sh
 # any型検出 → Issue起票

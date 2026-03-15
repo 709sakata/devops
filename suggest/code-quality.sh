@@ -1,12 +1,14 @@
 #!/bin/bash
 # code-quality.sh - コード品質サジェストのオーケストレーター
 # 実行タイミング: 週1回・月曜
-# crontab例: 0 3 * * 1 ~/scripts/suggest/code-quality.sh >> ~/scripts/suggest/logs/code-quality.log 2>&1
+# crontab例: 0 3 * * 1 ~/ghq/github.com/709sakata/devops/suggest/code-quality.sh
 
 set -euo pipefail
 
-AGENTS_DIR="${HOME}/scripts/devops/suggest/agents"
-source "${HOME}/scripts/devops/audit/agents/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+AGENTS_DIR="${SCRIPT_DIR}/agents"
+source "${SCRIPT_DIR}/../audit/agents/common.sh"
 
 log "=== code-quality suggest 開始 $(date '+%Y-%m-%d %H:%M:%S') ==="
 
@@ -25,6 +27,7 @@ for i in "${!REPOS[@]}"; do
   bash "${AGENTS_DIR}/uncommented.sh" "$repo" "$repo_dir" || log "[$repo_name] ⚠️  uncommented 異常終了"
   bash "${AGENTS_DIR}/naming.sh"      "$repo" "$repo_dir" || log "[$repo_name] ⚠️  naming 異常終了"
   bash "${AGENTS_DIR}/complexity.sh"  "$repo" "$repo_dir" || log "[$repo_name] ⚠️  complexity 異常終了"
+  bash "${AGENTS_DIR}/pr-creator.sh"  "$repo" "$repo_dir" || log "[$repo_name] ⚠️  pr-creator 異常終了"
   log "[$repo_name] ---- 完了 ----"
 done
 

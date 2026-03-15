@@ -6,7 +6,9 @@
 
 set -euo pipefail
 
-source "${HOME}/scripts/devops/audit/agents/common.sh"
+# [C-1] SCRIPT_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
+SCRIPT_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+source "${SCRIPT_DIR}/../../audit/agents/common.sh"
 
 REPO="$1"
 REPO_DIR="$2"
