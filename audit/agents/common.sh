@@ -12,7 +12,7 @@ REPO_DIRS=(
   "$HOME/ghq/github.com/Hopin-inc/civicship-portal"
 )
 OLLAMA_MODEL="qwen2.5-coder:7b"
-OLLAMA_URL="http://127.0.0.1:11435/api/generate"
+OLLAMA_URL="http://127.0.0.1:11434/api/generate"
 DATE=$(date +"%Y-%m-%d")
 # [C-2] LOG_DIR をスクリプト自身のパスから動的に解決（ハードコード廃止）
 # common.sh は audit/agents/ に置かれているため、その2階層上が audit/ になる
