@@ -8,7 +8,7 @@
 
 set -euo pipefail
 
-source "${HOME}/scripts/audit/agents/common.sh"
+source "${HOME}/scripts/devops/audit/agents/common.sh"
 
 REPO="$1"
 REPO_DIR="$2"

@@ -5,8 +5,8 @@
 
 set -euo pipefail
 
-AGENTS_DIR="${HOME}/scripts/suggest/agents"
-source "${HOME}/scripts/audit/agents/common.sh"
+AGENTS_DIR="${HOME}/scripts/devops/suggest/agents"
+source "${HOME}/scripts/devops/audit/agents/common.sh"
 
 log "=== code-quality suggest 開始 $(date '+%Y-%m-%d %H:%M:%S') ==="
 
